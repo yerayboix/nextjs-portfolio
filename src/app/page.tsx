@@ -13,7 +13,7 @@ export default function Home() {
         <Meteors number={30} />
         <section id="hero">
           <div className="mx-auto max-w-2xl space-y-2 p-4">
-            <TextAnimate animation="slideLeft" by="word" className="text-5xl font-bold leading-none" style={{ letterSpacing: "-0.05em" }}>
+            <TextAnimate animation="slideLeft" by="word" className="text-6xl font-bold leading-none" style={{ letterSpacing: "-0.05em" }}>
               Hola, soy Yeray Boix
             </TextAnimate>
             <TextAnimate animation="blurIn" by="word" className="text-xl">
