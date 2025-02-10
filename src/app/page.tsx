@@ -2,7 +2,11 @@ import { ModeToggle } from "@/components/theme-toggle";
 import { Meteors } from "@/components/magicui/meteors";
 import Image from "next/image";
 import { TextAnimate } from "@/components/magicui/text-animate";
-
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { AnimatedGradientTextExperience } from "./_components/animated-gradient-text-experience";
+import { BlurFade } from "@/components/magicui/blur-fade";
 export default function Home() {
   return (
     <main>
@@ -19,7 +23,11 @@ export default function Home() {
             <TextAnimate animation="blurIn" by="word" className="text-xl">
               Ingeniero de software especializado en desarrollo full-stack, arquitecturas escalables y despliegue en la nube.
             </TextAnimate>
+            <BlurFade>
+              <AnimatedGradientTextExperience />
+            </BlurFade>
           </div>
+
         </section>
       </div>
     </main>
