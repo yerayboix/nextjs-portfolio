@@ -1,3 +1,4 @@
+import { Spotlight } from "@/components/ui/spotlight-new";
 import Image from "next/image";
 
 export default function DesktopLayout() {
@@ -15,8 +16,9 @@ export default function DesktopLayout() {
       </div>
 
       {/* Columna Derecha - Descripción */}
-      <div className="flex-1 flex items-center justify-center p-8">
-        <div className="space-y-8 max-w-2xl">
+      <div className="flex-1 flex items-center justify-center p-8 relative">
+        <Spotlight containerWidth="constrained" position="right" />
+        <div className="space-y-8 max-w-2xl relative z-10">
           <div className="space-y-4">
             <h1 className="md:text-7xl lg:text-8xl font-new-title font-bold text-primary leading-tight">
               YERAY BOIX TORNER
