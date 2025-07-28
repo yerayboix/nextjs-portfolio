@@ -16,15 +16,18 @@ export default function DesktopLayout() {
 
       {/* Columna Derecha - Descripción */}
       <div className="flex-1 flex items-center justify-center p-8">
-        <div className="space-y-6">
-          <h1 className="md:text-7xl lg:text-8xl font-new-title font-bold text-primary">
-            YERAY BOIX TORNER
-          </h1>
-          <p className="md:text-lg lg:text-2xl font-pt-mono text-primary">
-            INGENIERO INFORMÁTICO - SOFTWARE - FULLSTACK
-          </p>
-          <p className="md:text-sm lg:text-lg font-pt-mono text-muted-foreground leading-relaxed uppercase">
-            Me apasiona crear tecnología útil, que resuelva problemas reales, y acompañar a personas y empresas en la transformación de una idea a una realidad.
+        <div className="space-y-8 max-w-2xl">
+          <div className="space-y-4">
+            <h1 className="md:text-7xl lg:text-8xl font-new-title font-bold text-primary leading-tight">
+              YERAY BOIX TORNER
+            </h1>
+            <p className="md:text-lg lg:text-2xl font-pt-mono text-primary border-b border-primary/30 pb-3">
+              INGENIERO INFORMÁTICO • DESARROLLADOR FULLSTACK
+            </p>
+          </div>
+          
+          <p className="md:text-base lg:text-lg font-pt-mono text-muted-foreground leading-relaxed italic">
+            &quot;Me apasiona crear tecnología útil que resuelva problemas reales, acompañando a personas y empresas en la transformación de ideas en realidades digitales.&quot;
           </p>
         </div>
       </div>

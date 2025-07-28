@@ -21,13 +21,12 @@ export default function MobileLayout() {
           <h1 className="text-8xl md:text-8xl font-new-title font-bold text-white">
             YERAY BOIX TORNER
           </h1>
-          <p className="text-xl font-pt-mono text-white/90 font-bold">
-            INGENIERO INFORMÁTICO - SOFTWARE - FULLSTACK
+          <p className="text-xl font-pt-mono text-white/90 font-bold border-b border-white/30 pb-2">
+            INGENIERO INFORMÁTICO • DESARROLLADOR FULLSTACK
           </p>
-          <p className="text-sm font-pt-mono text-white/90 leading-relaxed uppercase">
-            Me apasiona crear tecnología útil, que resuelva problemas reales, y acompañar a personas y empresas en la transformación de una idea a una realidad.
+          <p className="text-sm font-pt-mono text-white/90 leading-relaxed italic">
+            &quot;Me apasiona crear tecnología útil que resuelva problemas reales, acompañando a personas y empresas en la transformación de ideas en realidades digitales.&quot;
           </p>
-          
         </div>
       </div>
     </div>
