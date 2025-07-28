@@ -6,7 +6,7 @@ export default function DesktopLayout() {
       {/* Columna Izquierda - Imagen */}
       <div className="flex-1 relative">
         <Image
-          src="/images/yeray_catedral.jpg"
+          src="/images/yeray_catedral_color.jpg"
           alt="Yeray en la catedral"
           fill
           className="object-cover"

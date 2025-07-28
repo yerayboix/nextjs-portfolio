@@ -5,7 +5,7 @@ export default function MobileLayout() {
     <div className="md:hidden relative h-screen">
       {/* Imagen de Fondo */}
       <Image
-        src="/images/yeray_catedral.jpg"
+        src="/images/yeray_catedral_color.jpg"
         alt="Yeray en la catedral"
         fill
         className="object-cover"
