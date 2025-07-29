@@ -4,6 +4,7 @@ import { PT_Mono, Roboto, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { unstable_ViewTransition as ViewTransition } from 'react'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -87,7 +88,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ViewTransition>
+            {children}
+          </ViewTransition>
         </ThemeProvider>
       </body>
     </html>
