@@ -275,7 +275,7 @@ const MobileLayout = () => {
 
 export default function AboutMeSection() {
   return (
-    <section className="flex flex-col min-h-screen bg-custom-light-2 rounded-t-4xl relative overflow-hidden">
+    <section className="flex flex-col bg-custom-light-2 min-h-screen relative overflow-hidden">
       {/* Particles Background */}
       <div className="absolute inset-0 z-0">
         <Particles

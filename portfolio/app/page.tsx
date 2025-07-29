@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroSection from "./_components/hero/HeroSection";
 import AboutMeSection from "./_components/about-me/AboutMeSection";
+import ProjectsSection from "./_components/projects/ProjectsSection";
 
 // Registrar los plugins de GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -101,9 +102,8 @@ export default function Home() {
       >
         <AboutMeSection />
       </div>
-      <div className="relative z-20 min-h-screen">
+      <ProjectsSection />
 
-      </div>
     </div>
   );
 }
