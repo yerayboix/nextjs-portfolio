@@ -15,6 +15,10 @@ export default function Home() {
   const heroContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // Setea el scroll al inicio de la página por defecto al hacer refresh
+
+  useEffect(() => {
     setWindowHeight(window.innerHeight);
     
     const handleResize = () => {
