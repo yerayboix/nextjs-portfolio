@@ -2,6 +2,7 @@
 import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Settings, Database, Terminal, Code, Server, Cpu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,7 +38,8 @@ const toolsData = [
     description: "API RESTful para gestión de datos empresariales con autenticación JWT y documentación automática.",
     technologies: ["Django", "Django REST", "Python", "PostgreSQL", "Docker"],
     githubUrl: "https://github.com/example/api",
-    isPublic: false
+    isPublic: false,
+    icon: Database
   },
   {
     id: 2,
@@ -45,7 +47,8 @@ const toolsData = [
     description: "Herramienta de línea de comandos para automatizar tareas de DevOps y despliegues.",
     technologies: ["Python", "Click", "Docker", "Kubernetes", "Git"],
     githubUrl: "https://github.com/example/cli-tool",
-    isPublic: true
+    isPublic: true,
+    icon: Terminal
   },
   {
     id: 3,
@@ -53,7 +56,8 @@ const toolsData = [
     description: "Pipeline de procesamiento de datos con ETL automatizado y transformaciones complejas.",
     technologies: ["Python", "Apache Airflow", "PostgreSQL", "Redis", "Celery"],
     githubUrl: "https://github.com/example/data-pipeline",
-    isPublic: false
+    isPublic: false,
+    icon: Server
   }
 ];
 
@@ -147,7 +151,7 @@ const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
           {/* Icon and Title */}
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-to-br from-custom-light-2/20 to-custom-light-2/30 rounded-lg flex items-center justify-center">
-              <div className="text-custom-light-2 text-2xl">🔧</div>
+              <tool.icon className="w-6 h-6 text-custom-light-2" />
             </div>
             <CardTitle className="text-xl md:text-2xl font-new-title font-semibold text-custom-light-2">
               {tool.title}
