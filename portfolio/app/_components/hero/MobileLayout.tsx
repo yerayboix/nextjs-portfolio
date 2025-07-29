@@ -24,7 +24,7 @@ export default function MobileLayout() {
           <div className="space-y-4">
             <HyperText 
               as="h1" 
-              className="text-8xl md:text-8xl font-new-title font-bold text-white"
+              className="text-8xl md:text-8xl font-new-title font-bold text-custom-light-2"
               fontClassName="font-new-title"
               animateOnHover={false}
             >
@@ -33,7 +33,7 @@ export default function MobileLayout() {
           </div>
           <HyperText 
             as="p" 
-            className="text-xl font-pt-mono text-white/90 font-bold border-b border-white/30 pb-2"
+            className="text-xl font-pt-mono text-custom-light-2 font-bold border-b border-custom-light/30 pb-2"
             fontClassName="font-pt-mono"
             animateOnHover={false}
           >
@@ -41,7 +41,7 @@ export default function MobileLayout() {
           </HyperText>
           <HyperText 
             as="p" 
-            className="text-sm font-pt-mono text-white/90 leading-relaxed italic"
+            className="text-sm font-pt-mono text-custom-light-2 leading-relaxed italic"
             fontClassName="font-pt-mono"
             animateOnHover={false}
           >

@@ -4,10 +4,10 @@ export default function AboutMeSection() {
       {/* Main Title */}
       <div className="flex justify-start pt-8 pb-8 px-8">
         <div className="w-full max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-9xl font-new-title font-bold text-secondary">
+          <h1 className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-secondary text-center md:text-left">
             Tecnologías
           </h1>
-          <p className="text-lg md:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl">
+          <p className="text-sm text-center md:text-left md:text-base lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
             Me mantengo constantemente actualizado con las últimas tecnologías y tendencias del sector, adaptándome a un entorno tecnológico en constante evolución. No tengo miedo a enfrentarme al aprendizaje de cualquier tecnología que no aparezca en esta lista.
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function AboutMeSection() {
         <div className="text-center space-y-6 max-w-sm">
           {/* Languages */}
           <div className="space-y-3">
-            <h2 className="text-xl font-new-title font-semibold text-secondary">
+            <h2 className="text-2xl font-new-title font-semibold text-secondary">
               Lenguajes
             </h2>
             <div className="flex flex-wrap gap-2 justify-center">
@@ -127,7 +127,7 @@ export default function AboutMeSection() {
 
           {/* Frameworks */}
           <div className="space-y-3">
-            <h2 className="text-xl font-new-title font-semibold text-secondary">
+            <h2 className="text-2xl font-new-title font-semibold text-secondary">
               Frameworks y Librerías
             </h2>
             <div className="flex flex-wrap gap-2 justify-center">
@@ -141,7 +141,7 @@ export default function AboutMeSection() {
 
           {/* DevOps */}
           <div className="space-y-3">
-            <h2 className="text-xl font-new-title font-semibold text-secondary">
+            <h2 className="text-2xl font-new-title font-semibold text-secondary">
               DevOps
             </h2>
             <div className="flex flex-wrap gap-2 justify-center">
@@ -155,7 +155,7 @@ export default function AboutMeSection() {
 
           {/* Databases */}
           <div className="space-y-3">
-            <h2 className="text-xl font-new-title font-semibold text-secondary">
+            <h2 className="text-2xl font-new-title font-semibold text-secondary">
               Bases de Datos
             </h2>
             <div className="flex flex-wrap gap-2 justify-center">
@@ -169,7 +169,7 @@ export default function AboutMeSection() {
 
           {/* Communication */}
           <div className="space-y-3">
-            <h2 className="text-xl font-new-title font-semibold text-secondary">
+            <h2 className="text-2xl font-new-title font-semibold text-secondary">
               Comunicación
             </h2>
             <div className="flex flex-wrap gap-2 justify-center">
@@ -183,7 +183,7 @@ export default function AboutMeSection() {
 
           {/* Others */}
           <div className="space-y-3">
-            <h2 className="text-xl font-new-title font-semibold text-secondary">
+            <h2 className="text-2xl font-new-title font-semibold text-secondary">
               Otros
             </h2>
             <div className="flex flex-wrap gap-2 justify-center">
