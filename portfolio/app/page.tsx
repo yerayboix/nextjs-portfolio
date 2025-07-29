@@ -1,11 +1,16 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroSection from "./_components/hero/HeroSection";
 import AboutMeSection from "./_components/about-me/AboutMeSection";
 
+// Registrar el plugin ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
   const [windowHeight, setWindowHeight] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setWindowHeight(window.innerHeight);
@@ -14,29 +19,44 @@ export default function Home() {
       setWindowHeight(window.innerHeight);
     };
 
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
     window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
     
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Calculate opacity based on scroll position
-  const heroOpacity = Math.max(0, 1 - (scrollY / (windowHeight * 0.5)));
+  useEffect(() => {
+    if (!heroRef.current) return;
+
+    // Crear la animación de opacidad con GSAP
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        onUpdate: (self) => {
+          // Calcular la opacidad basada en el progreso del scroll
+          const progress = self.progress;
+          const opacity = Math.max(0, 1 - progress * 2); // Fade out en la primera mitad
+          gsap.set(heroRef.current, { opacity });
+        }
+      }
+    });
+
+    return () => {
+      // Limpiar la animación cuando el componente se desmonte
+      tl.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   return (
     <div className="relative">
       <div 
-        className="fixed top-0 left-0 w-full h-screen z-10 transition-opacity duration-300"
-        style={{
-          opacity: heroOpacity,
-        }}
+        ref={heroRef}
+        className="fixed top-0 left-0 w-full h-screen z-10"
       >
         <HeroSection />
       </div>
