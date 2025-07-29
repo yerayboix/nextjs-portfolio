@@ -18,7 +18,7 @@ const DesktopLayout = () => {
       <div className="hidden md:flex justify-start pt-8 pb-8 px-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-secondary text-center md:text-left">
-            Tecnologías
+            Habilidades
           </h1>
           <div className="text-center md:text-left">
             <p className="text-sm md:text-base lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
@@ -152,7 +152,7 @@ const MobileLayout = () => {
       <div className="md:hidden flex justify-start pt-8 pb-8 px-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-secondary text-center">
-            Tecnologías
+            Habilidades
           </h1>
           <div className="text-center">
             <p className="text-sm md:text-base lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
