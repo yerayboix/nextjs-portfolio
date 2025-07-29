@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import HeroSection from "./_components/hero/HeroSection";
-import AboutMeSection from "./_components/about_me/AboutMeSection";
+import AboutMeSection from "./_components/about-me/AboutMeSection";
 
 export default function Home() {
   const [windowHeight, setWindowHeight] = useState(0);
