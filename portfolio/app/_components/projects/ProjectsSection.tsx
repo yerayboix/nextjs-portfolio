@@ -1,5 +1,7 @@
 "use client"
 import { Particles } from "@/components/magicui/particles";
+import { MagicCard } from "@/components/magicui/magic-card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -58,10 +60,17 @@ const toolsData = [
 // Web Project Card Component
 const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => {
   return (
-    <div className="bg-custom-light-2/10 backdrop-blur-sm border border-custom-light-2/20 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 group h-full">
-      <div className="flex flex-col gap-4">
-        {/* Image */}
-        <div>
+    <Card className="p-0 w-full shadow-none border-none bg-transparent h-full">
+      <MagicCard
+        gradientSize={300}
+        gradientColor="#1a1a1a"
+        gradientOpacity={0.6}
+        gradientFrom="#ffffff"
+        gradientTo="#e5e5e5"
+        className="p-0"
+      >
+        <CardHeader className="p-4">
+          {/* Image */}
           <div className="relative h-48 rounded-lg overflow-hidden">
             <Image
               src={project.image}
@@ -70,14 +79,13 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
               className="object-cover group-hover:scale-105 transition-transform duration-200"
             />
           </div>
-        </div>
+        </CardHeader>
 
-        {/* Content */}
-        <div className="space-y-4 flex-1">
+        <CardContent className="space-y-4 flex-1 p-4">
           <div>
-            <h3 className="text-xl md:text-2xl font-new-title font-semibold text-custom-light-2 mb-2">
+            <CardTitle className="text-xl md:text-2xl font-new-title font-semibold text-custom-light-2 mb-2">
               {project.title}
-            </h3>
+            </CardTitle>
             <p className="text-sm font-pt-mono text-custom-light-2/80 leading-relaxed">
               {project.description}
             </p>
@@ -94,53 +102,60 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
               </span>
             ))}
           </div>
+        </CardContent>
 
-          {/* Links */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            {project.liveUrl && (
-              <Link
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-custom-light-2 text-background rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/90 transition-colors duration-200"
-              >
-                Ver Proyecto
-              </Link>
-            )}
-            {project.githubUrl && (
-              <Link
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
-              >
-                {project.isPublic ? "Ver Código" : "Detalles"}
-              </Link>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+        <CardFooter className="flex flex-wrap gap-3 pt-2 p-4">
+          {project.liveUrl && (
+            <Link
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-custom-light-2 text-background rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/90 transition-colors duration-200"
+            >
+              Ver Proyecto
+            </Link>
+          )}
+          {project.githubUrl && (
+            <Link
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
+            >
+              {project.isPublic ? "Ver Código" : "Detalles"}
+            </Link>
+          )}
+        </CardFooter>
+      </MagicCard>
+    </Card>
   );
 };
 
 // Tool Card Component
 const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
   return (
-    <div className="bg-custom-light-2/10 backdrop-blur-sm border border-custom-light-2/20 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 group h-full">
-      <div className="flex flex-col gap-4 h-full">
-        {/* Icon */}
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-custom-light-2/20 to-custom-light-2/30 rounded-lg flex items-center justify-center">
-            <div className="text-custom-light-2 text-2xl">🔧</div>
+    <Card className="p-0 w-full shadow-none border-none bg-transparent h-full">
+      <MagicCard
+        gradientSize={250}
+        gradientColor="#1a1a1a"
+        gradientOpacity={0.5}
+        gradientFrom="#64b5f6"
+        gradientTo="#42a5f5"
+        className="p-0"
+      >
+        <CardHeader className="p-4">
+          {/* Icon and Title */}
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-gradient-to-br from-custom-light-2/20 to-custom-light-2/30 rounded-lg flex items-center justify-center">
+              <div className="text-custom-light-2 text-2xl">🔧</div>
+            </div>
+            <CardTitle className="text-xl md:text-2xl font-new-title font-semibold text-custom-light-2">
+              {tool.title}
+            </CardTitle>
           </div>
-          <h3 className="text-xl md:text-2xl font-new-title font-semibold text-custom-light-2">
-            {tool.title}
-          </h3>
-        </div>
+        </CardHeader>
 
-        {/* Content */}
-        <div className="space-y-4 flex-1">
+        <CardContent className="space-y-4 flex-1 p-4">
           <p className="text-sm font-pt-mono text-custom-light-2/80 leading-relaxed">
             {tool.description}
           </p>
@@ -156,23 +171,22 @@ const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
               </span>
             ))}
           </div>
+        </CardContent>
 
-          {/* Links */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            {tool.githubUrl && (
-              <Link
-                href={tool.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
-              >
-                {tool.isPublic ? "Ver Código" : "Detalles"}
-              </Link>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+        <CardFooter className="flex flex-wrap gap-3 pt-2 p-4">
+          {tool.githubUrl && (
+            <Link
+              href={tool.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
+            >
+              {tool.isPublic ? "Ver Código" : "Detalles"}
+            </Link>
+          )}
+        </CardFooter>
+      </MagicCard>
+    </Card>
   );
 };
 
