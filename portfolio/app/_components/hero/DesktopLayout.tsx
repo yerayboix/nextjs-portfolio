@@ -20,7 +20,7 @@ export default function DesktopLayout() {
         <Spotlight containerWidth="constrained" position="right" />
         <div className="space-y-8 max-w-2xl relative z-10">
           <div className="space-y-4">
-            <h1 className="md:text-7xl lg:text-8xl font-new-title font-bold text-primary leading-tight">
+            <h1 className="md:text-7xl lg:text-8xl font-new-title font-bold leading-tight bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text bg-opacity-50">
               YERAY BOIX TORNER
             </h1>
             <p className="md:text-lg lg:text-2xl font-pt-mono text-primary border-b border-primary/30 pb-3">
