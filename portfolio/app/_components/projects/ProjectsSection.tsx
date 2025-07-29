@@ -215,7 +215,7 @@ const DesktopLayout = () => {
       <div className="hidden md:flex flex-1 px-8 pb-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto space-y-8">
           <div>
-            <h2 className="text-3xl font-new-title font-semibold text-custom-light-2 mb-6">
+            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-6">
               Desarrollos Web
             </h2>
             <div className="grid grid-cols-2 gap-8">
@@ -227,7 +227,7 @@ const DesktopLayout = () => {
           
           {/* Tools Section */}
           <div>
-            <h2 className="text-3xl font-new-title font-semibold text-custom-light-2 mb-6">
+            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-6">
               Herramientas y APIs
             </h2>
             <div className="grid grid-cols-3 gap-6">
@@ -301,7 +301,7 @@ export default function ProjectsSection() {
                     staticity={30}
                     ease={50}
                     size={0.8}
-                    color="#1a1a1a"
+                    color="#ffffff"
                     vx={0.1}
                     vy={0.1}
                 />
