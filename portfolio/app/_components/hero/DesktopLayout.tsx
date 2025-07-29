@@ -1,3 +1,4 @@
+"use client"
 import { Spotlight } from "@/components/ui/spotlight-new";
 import Image from "next/image";
 
