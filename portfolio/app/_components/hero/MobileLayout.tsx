@@ -45,7 +45,7 @@ export default function MobileLayout() {
             fontClassName="font-pt-mono"
             animateOnHover={false}
           >
-            &quot;Me apasiona crear tecnología útil que resuelva problemas reales, acompañando a personas y empresas en la transformación de ideas en realidades digitales.&quot;
+            &quot;Me apasiona crear tecnología útil que resuelva problemas reales, acompañando a personas y empresas en la transformación de ideas en realidades.&quot;
           </HyperText>
           <AvailabilityIndicator variant="badge" text="Disponible para trabajar de forma inmediata" />
         </div>

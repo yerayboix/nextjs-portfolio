@@ -19,14 +19,14 @@ export default function DesktopLayout() {
       </div>
 
       {/* Columna Derecha - Descripción */}
-      <div className="flex-1 flex items-center justify-center p-8 relative">
+      <div className="flex-1 flex items-center justify-center p-8 relative bg-custom-dark">
         <Spotlight containerWidth="constrained" position="right" />
         <div className="space-y-8 max-w-2xl relative z-10">
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <HyperText 
                 as="h1" 
-                className="md:text-7xl lg:text-8xl font-new-title font-bold leading-tight bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text bg-opacity-50"
+                className="md:text-7xl lg:text-8xl font-new-title font-bold leading-tight text-custom-light"
                 fontClassName="font-new-title"
                 animateOnHover={false}
                 delay={0}
@@ -36,7 +36,7 @@ export default function DesktopLayout() {
             </div>
             <HyperText 
               as="p" 
-              className="md:text-lg lg:text-2xl font-pt-mono text-primary border-b border-primary/30 pb-3"
+              className="md:text-lg lg:text-2xl font-pt-mono text-custom-light border-b border-custom-light/30 pb-3"
               fontClassName="font-pt-mono"
               animateOnHover={false}
             >
@@ -47,12 +47,12 @@ export default function DesktopLayout() {
           <div className="space-y-4">
             <HyperText 
               as="p" 
-              className="md:text-base lg:text-lg font-pt-mono text-muted-foreground leading-relaxed italic"
+              className="md:text-base lg:text-lg font-pt-mono text-custom-light leading-relaxed italic"
               fontClassName="font-pt-mono"
               animateOnHover={false}
               textCase="normal"
             >
-              &quot;Me apasiona crear tecnología útil que resuelva problemas reales, acompañando a personas y empresas en la transformación de ideas en realidades digitales.&quot;
+              &quot;Me apasiona crear tecnología útil que resuelva problemas reales, acompañando a personas y empresas en la transformación de ideas en realidades.&quot;
             </HyperText>
             <AvailabilityIndicator variant="badge" text="Disponible para trabajar de forma inmediata" />
           </div>
