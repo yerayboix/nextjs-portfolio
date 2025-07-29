@@ -27,6 +27,16 @@ const webProjectsData = [
     liveUrl: "https://dashboard.example.com",
     githubUrl: "https://github.com/example/dashboard",
     isPublic: true
+  },
+  {
+    id: 3,
+    title: "Portfolio Personal",
+    description: "Portfolio personal desarrollado con Next.js y TypeScript, con diseño moderno y animaciones fluidas.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Magic UI"],
+    image: null,
+    liveUrl: "https://yerayboix.com",
+    githubUrl: "https://github.com/yerayboix/portfolio",
+    isPublic: true
   }
 ];
 
@@ -74,14 +84,27 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
         className="p-0"
       >
         <CardHeader className="p-4">
-          {/* Image */}
+          {/* Image or Placeholder */}
           <div className="relative h-48 rounded-lg overflow-hidden">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-200"
-            />
+            {project.image ? (
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-custom-light-2/10 to-custom-light-2/20 flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="w-16 h-16 bg-custom-light-2/20 rounded-full flex items-center justify-center mb-3">
+                    <Code className="w-8 h-8 text-custom-light-2" />
+                  </div>
+                  <p className="text-sm font-pt-mono text-custom-light-2/60">
+                    Proyecto privado
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </CardHeader>
 
