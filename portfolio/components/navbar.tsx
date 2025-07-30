@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { AvailabilityIndicator } from "@/components/ui/availability-indicator";
 import {
@@ -23,18 +24,21 @@ const Navbar = () => {
     }, []);
 
     const navItems = [
-        { name: "Home", href: "#home" },
-        { name: "Sobre mí", href: "#about" },
-        { name: "Proyectos", href: "#projects" },
-        { name: "Contacto", href: "#contact" },
+        { name: "Home", href: "/" },
+        { name: "Sobre mí", href: "/#about" },
+        { name: "Proyectos", href: "/#projects" },
+        { name: "Contacto", href: "/contact" },
     ];
 
-      const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+    const scrollToSection = (href: string) => {
+      if (href.startsWith('/#')) {
+        // Es un enlace interno con hash, hacer scroll
+        const element = document.querySelector(href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
 
     return (
         <nav
@@ -50,22 +54,30 @@ const Navbar = () => {
                             ? "opacity-100 transform translate-x-0"
                             : "opacity-0 transform -translate-x-4"
                         }`}>
-                        <HyperText
-                            as="span"
-                            className="text-3xl font-new-title font-bold text-custom-light-2"
-                            fontClassName="font-new-title"
-                            animateOnHover={false}
-                        >
-                            YERAY BOIX TORNER
-                        </HyperText>
+                        <Link href="/">
+                            <HyperText
+                                as="span"
+                                className="text-3xl font-new-title font-bold text-custom-light-2"
+                                fontClassName="font-new-title"
+                                animateOnHover={false}
+                            >
+                                YERAY BOIX TORNER
+                            </HyperText>
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation - Right side */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navItems.map((item) => (
-                            <button
+                            <Link
                                 key={item.name}
-                                onClick={() => scrollToSection(item.href)}
+                                href={item.href}
+                                onClick={(e) => {
+                                    if (item.href.startsWith('/#')) {
+                                        e.preventDefault();
+                                        scrollToSection(item.href);
+                                    }
+                                }}
                                 className="text-custom-light hover:text-custom-light-2 transition-colors duration-200 font-pt-mono text-sm cursor-pointer"
                             >
                                 <HyperText
@@ -74,7 +86,7 @@ const Navbar = () => {
                                 >
                                     {item.name}
                                 </HyperText>
-                            </button>
+                            </Link>
                         ))}
                         <AvailabilityIndicator variant="badge" text="Disponible" />
                     </div>
@@ -107,13 +119,19 @@ const Navbar = () => {
                 </SheetHeader>
                 <div className="space-y-4">
                   {navItems.map((item) => (
-                    <button
+                    <Link
                       key={item.name}
-                      onClick={() => scrollToSection(item.href)}
+                      href={item.href}
+                      onClick={(e) => {
+                          if (item.href.startsWith('/#')) {
+                              e.preventDefault();
+                              scrollToSection(item.href);
+                          }
+                      }}
                       className="block w-full text-left px-6 py-4 text-custom-light hover:text-custom-light-2 hover:bg-custom-light/10 transition-all duration-200 font-pt-mono text-base rounded-lg border border-transparent hover:border-custom-light/20"
                     >
                       {item.name}
-                    </button>
+                    </Link>
                   ))}
                   <div className="px-6 py-4">
                     <AvailabilityIndicator variant="badge" text="Disponible" />

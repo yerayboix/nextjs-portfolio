@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroSection from "./_components/hero/HeroSection";
 import AboutMeSection from "./_components/about-me/AboutMeSection";
 import ProjectsSection from "./_components/projects/ProjectsSection";
-import ContactSection from "./_components/contact/ContactSection";
+import Footer from "./_components/footer/Footer";
 import Navbar from "@/components/navbar";
 
 // Registrar los plugins de GSAP
@@ -111,8 +111,7 @@ export default function Home() {
         <AboutMeSection />
       </div>
       <ProjectsSection />
-      <ContactSection />
-
+      <Footer />
     </div>
   );
 }

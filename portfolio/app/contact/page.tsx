@@ -4,29 +4,30 @@ import { HyperText } from "@/components/magicui/hyper-text";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 const contactData = [
   {
     name: "Email",
-    value: "yeray.boix@gmail.com",
+    value: "yerayboix@gmail.com",
     icon: Mail,
-    href: "mailto:yeray.boix@gmail.com",
+    href: "mailto:yerayboix@gmail.com",
     description: "Envíame un email directamente"
   },
   {
     name: "LinkedIn",
-    value: "yeray-boix-torner",
+    value: "yerayboix",
     icon: Linkedin,
-    href: "https://linkedin.com/in/yeray-boix-torner",
+    href: "https://linkedin.com/in/yerayboix",
     description: "Conecta conmigo profesionalmente"
   },
-  {
-    name: "GitHub",
-    value: "yerayboix",
-    icon: Github,
-    href: "https://github.com/yerayboix",
-    description: "Revisa mi código y proyectos"
-  }
+  // {
+  //   name: "GitHub",
+  //   value: "yerayboix",
+  //   icon: Github,
+  //   href: "https://github.com/yerayboix",
+  //   description: "Revisa mi código y proyectos"
+  // }
 ];
 
 const ContactCard = ({ contact }: { contact: typeof contactData[0] }) => {
@@ -70,13 +71,13 @@ const DesktopLayout = () => {
         <div className="w-full max-w-6xl mx-auto">
           <HyperText 
             as="h1" 
-            className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-custom-light text-center md:text-left"
+            className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-custom-light text-center"
             fontClassName="font-new-title"
             animateOnHover={false}
           >
             Contacto
           </HyperText>
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <HyperText 
               as="p" 
               className="text-sm md:text-base lg:text-xl font-pt-mono text-custom-light/80 mt-4 max-w-6xl px-2 md:px-0"
@@ -91,7 +92,7 @@ const DesktopLayout = () => {
       
       <div className="hidden md:flex flex-1 px-8 pb-8 relative z-10">
         <div className="w-full max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-8">
             {contactData.map((contact) => (
               <ContactCard key={contact.name} contact={contact} />
             ))}
@@ -126,7 +127,7 @@ const MobileLayout = () => {
         <div className="w-full max-w-6xl mx-auto">
           <HyperText 
             as="h1" 
-            className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-custom-light text-center"
+            className="text-6xl md:text-6xl lg:text-9xl font-new-title font-bold text-custom-light text-center"
             fontClassName="font-new-title"
             animateOnHover={false}
           >
@@ -173,9 +174,12 @@ const MobileLayout = () => {
   );
 };
 
-export default function ContactSection() {
+export default function ContactPage() {
   return (
-    <section id="contact" className="flex flex-col bg-custom-dark min-h-screen relative overflow-hidden">
+    <section className="flex flex-col bg-custom-dark min-h-screen relative overflow-hidden pt-10">
+      {/* Navbar */}
+      <Navbar />
+      
       {/* Particles Background */}
       <div className="absolute inset-0 z-0">
         <Particles
