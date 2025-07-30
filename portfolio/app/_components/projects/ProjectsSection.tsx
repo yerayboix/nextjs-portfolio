@@ -167,7 +167,7 @@ const webProjectsData = [
     title: "Gestión Inventario y Facturación",
     description: "Sistema completo de gestión de inventario, facturación y control de stock en tiempo real.",
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Supabase", "Docker", "Git"],
-    image: "/images/gestion-inventario.jpg",
+    image: "/images/apps/gestioninventario.jpg",
     liveUrl: null,
     githubUrl: null,
     isPublic: false,
