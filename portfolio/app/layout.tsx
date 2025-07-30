@@ -69,7 +69,7 @@ const newTitle = localFont({
 
 export const metadata: Metadata = {
   title: "Yeray Boix Torner | Portfolio",
-  description: "Yeray Boix Torner | Portfolio",
+  description: "Bienvenido a mi portfolio, donde encontrarás un desglose de todas mis habilidades y un listado de todos los proyectos en los que he formado parte durante mi carrera profesional.",
 };
 
 export default function RootLayout({
