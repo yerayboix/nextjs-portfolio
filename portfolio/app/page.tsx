@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroSection from "./_components/hero/HeroSection";
 import AboutMeSection from "./_components/about-me/AboutMeSection";
 import ProjectsSection from "./_components/projects/ProjectsSection";
+import ContactSection from "./_components/contact/ContactSection";
+import Navbar from "@/components/navbar";
 
 // Registrar los plugins de GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -88,7 +90,9 @@ export default function Home() {
 
   return (
     <div className="relative">
+      <Navbar />
       <div 
+        id="home"
         ref={heroRef}
         className="fixed top-0 left-0 w-full h-screen z-10"
       >
@@ -107,6 +111,7 @@ export default function Home() {
         <AboutMeSection />
       </div>
       <ProjectsSection />
+      <ContactSection />
 
     </div>
   );
