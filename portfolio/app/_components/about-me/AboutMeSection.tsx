@@ -22,7 +22,7 @@ const DesktopLayout = () => {
           </h1>
           <div className="text-center md:text-left">
             <p className="text-sm md:text-base lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
-              Me mantengo constantemente actualizado con las últimas tecnologías y tendencias del sector, adaptándome a un entorno tecnológico en constante evolución. No tengo miedo a enfrentarme al aprendizaje de cualquier tecnología que no aparezca en esta lista.
+              Me mantengo constantemente actualizado con las últimas tecnologías y tendencias del sector, adaptándome a un entorno tecnológico en constante evolución. <span className="font-bold">No tengo miedo a enfrentarme al aprendizaje de cualquier tecnología que no aparezca en esta lista.</span>
             </p>
           </div>
         </div>
@@ -155,8 +155,8 @@ const MobileLayout = () => {
             Habilidades
           </h1>
           <div className="text-center">
-            <p className="text-sm md:text-base lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
-              Me mantengo constantemente actualizado con las últimas tecnologías y tendencias del sector, adaptándome a un entorno tecnológico en constante evolución. No tengo miedo a enfrentarme al aprendizaje de cualquier tecnología que no aparezca en esta lista.
+            <p className="text-sm md:text-base font-bold lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
+              Me mantengo constantemente actualizado con las últimas tecnologías y tendencias del sector, adaptándome a un entorno tecnológico en constante evolución. <span className="font-bold">No tengo miedo a enfrentarme al aprendizaje de cualquier tecnología que no aparezca en esta lista.</span>
             </p>
           </div>
         </div>
