@@ -13,110 +13,121 @@ const webProjectsData = [
     title: "EQUIP HR",
     description: "Sistema de gestión de control horario, módulo de solicitud de vacaciones y generación de informes por usuario.",
     technologies: ["Django", "Python", "PostgreSQL", "Docker", "Git"],
-    image: "/images/equip-hr.jpg",
+    image: "/images/apps/equiphr.jpg",
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   },
   {
     id: 2,
     title: "EQUIP CRM",
     description: "Sistema de gestión de relaciones con clientes para optimizar ventas y seguimiento comercial.",
-    technologies: ["Django", "Python", "PostgreSQL", "Docker", "Git"],
+    technologies: ["Django", "Python", "Celery", "Redis", "PostgreSQL", "Docker", "Git"],
     image: null,
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   },
   {
     id: 3,
     title: "Bufanuvols",
     description: "Plataforma interna de gestión de dispositivos de EQUIP Electronics.",
-    technologies: ["Django", "Django REST Framework", "Python", "MQTT", "RabbitMQ", "PostgreSQL", "Docker", "Git"],
-    image: "/images/bufanuvols.jpg",
+    technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "MQTT", "RabbitMQ", "PostgreSQL", "Docker", "Git"],
+    image: "/images/apps/bufanuvols.jpg",
     liveUrl: "https://bufanuvols.cloud/",
     githubUrl: null,
-    isPublic: true
+    isPublic: true,
+    hasDetail: true
   },
   {
     id: 4,
     title: "MYRECARGA",
     description: "Plataforma para la ingesta, muestra y envío de datos de estaciones de recarga de vehículos eléctricos a plataforma IoT.",
-    technologies: ["Django", "Django REST Framework", "Python", "IoT", "PostgreSQL", "Docker", "Git"],
-    image: "/images/myre carga.jpg",
+    technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "IoT", "PostgreSQL", "Docker", "Git"],
+    image: null,
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: true
   },
   {
     id: 5,
-    title: "CLOUDSENSORS",
+    title: "Vibralinker",
     description: "Plataforma de ingesta, tratamiento y visualización de datos de sensores provenientes de maquinaria pesada.",
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Apache Druid", "Apache Airflow", "PostgreSQL", "Docker", "Kubernetes", "Git"],
-    image: "/images/cloudsensors.jpg",
+    image: "/images/apps/vibralinker.jpg",
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   },
   {
     id: 6,
     title: "BARCOS",
     description: "Plataforma de gestión de flotas de barcos y gestión de rutas de navegación.",
-    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
+    technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "PostgreSQL", "Docker", "Git"],
     image: null,
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   },
   {
     id: 7,
     title: "Llanos del Hospital",
     description: "Web para el hotel Llanos del Hospital y SFTP para la gestión de archivos.",
-    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
-    image: "/images/llanos-hospital.jpg",
+    technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "PostgreSQL", "Docker", "Git"],
+    image: "/images/apps/llanoshospital.jpg",
     liveUrl: "https://llanosdelhospital.com",
     githubUrl: null,
-    isPublic: true
+    isPublic: true,
+    hasDetail: false
   },
   {
     id: 8,
     title: "Qualideep",
     description: "Web para promocionar Qualideep, un sistema de gestión de calidad y auditorías para empresas con el uso de IA.",
     technologies: ["Next.js", "React", "TypeScript", "Docker", "Git"],
-    image: "/images/qualideep.jpg",
+    image: "/images/apps/qualideep.jpg",
     liveUrl: "https://qualideep.com",
     githubUrl: null,
-    isPublic: true
+    isPublic: true,
+    hasDetail: false
   },
   {
     id: 9,
     title: "Revantik",
     description: "Web para promocionar Revantik, partner de Odoo enfocado en el sector industrial.",
     technologies: ["Next.js", "React", "TypeScript"],
-    image: "/images/revantik.jpg",
+    image: "/images/apps/revantik.jpg",
     liveUrl: "https://revantik.com",
     githubUrl: null,
-    isPublic: true
+    isPublic: true,
+    hasDetail: false
   },
   {
     id: 10,
     title: "Proteu",
     description: "Sistema para la gestión de laboratorios y almacenamiento y muestra de resultados de análisis de laboratorio.",
     technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
-    image: "/images/proteu.jpg",
+    image: "/images/apps/proteu.jpg",
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   },
   {
     id: 11,
     title: "Solutia Gestión Ausencias",
     description: "Sistema para la gestión de ausencias, importación de ficheros FIE y configuración de alarmas para notificaciones.",
-    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Kubernetes", "Git"],
+    technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "PostgreSQL", "Docker", "Kubernetes", "Git"],
     image: null,
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: true
   },
   {
     id: 12,
@@ -126,7 +137,8 @@ const webProjectsData = [
     image: "/images/equip-licencias.jpg",
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   },
   {
     id: 13,
@@ -136,17 +148,19 @@ const webProjectsData = [
     image: "/images/equip-ba.jpg",
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   },
   {
     id: 14,
     title: "DeOficina",
-    description: "Solución de gestión de oficinas y espacios de trabajo con reservas y control de acceso.",
-    technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Supabase", "Docker", "Git"],
-    image: "/images/deoficina.jpg",
+    description: "Plataforma de obtención de las mejores ofertas para productos de oficina scrappeado directamente desde Amazon y notificaciones mediante Telegram.",
+    technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Celery", "Redis", "Supabase", "Docker", "Git"],
+    image: "/images/apps/deoficina.jpg",
     liveUrl: "https://deoficina.com",
     githubUrl: null,
-    isPublic: true
+    isPublic: true,
+    hasDetail: false
   },
   {
     id: 15,
@@ -156,7 +170,8 @@ const webProjectsData = [
     image: "/images/gestion-inventario.jpg",
     liveUrl: null,
     githubUrl: null,
-    isPublic: false
+    isPublic: false,
+    hasDetail: false
   }
 ];
 
@@ -169,6 +184,7 @@ const toolsData = [
     technologies: ["Python", "MQTT", "PostgreSQL", "Docker", "Git"],
     githubUrl: null,
     isPublic: false,
+    hasDetail: false,
     icon: Terminal
   },
   {
@@ -178,6 +194,7 @@ const toolsData = [
     technologies: ["Next.js", "React", "TypeScript", "Flask", "Python", "SQLite", "Docker", "Git"],
     githubUrl: null,
     isPublic: false,
+    hasDetail: false,
     icon: Settings
   }
 ];
@@ -253,12 +270,14 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
               Ver Proyecto
             </Link>
           )}
-          <Link
-            href={`/projects/${project.id}`}
-            className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
-          >
-            Ver Detalle
-          </Link>
+          {project.hasDetail && (
+            <Link
+              href={`/projects/${project.id}`}
+              className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
+            >
+              Ver Detalle
+            </Link>
+          )}
         </CardFooter>
       </MagicCard>
     </Card>
@@ -308,12 +327,14 @@ const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
         </CardContent>
 
         <CardFooter className="flex flex-wrap gap-3 pt-2 p-4 mt-auto">
-          <Link
-            href={`/tools/${tool.id}`}
-            className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
-          >
-            Ver Detalle
-          </Link>
+          {tool.hasDetail && (
+            <Link
+              href={`/tools/${tool.id}`}
+              className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
+            >
+              Ver Detalle
+            </Link>
+          )}
         </CardFooter>
       </MagicCard>
     </Card>
