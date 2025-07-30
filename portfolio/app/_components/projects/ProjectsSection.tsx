@@ -39,7 +39,7 @@ const webProjectsData = [
     liveUrl: "https://bufanuvols.cloud/",
     githubUrl: null,
     isPublic: true,
-    hasDetail: true
+    hasDetail: false
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const webProjectsData = [
     liveUrl: null,
     githubUrl: null,
     isPublic: false,
-    hasDetail: true
+    hasDetail: false
   },
   {
     id: 5,
@@ -127,14 +127,14 @@ const webProjectsData = [
     liveUrl: null,
     githubUrl: null,
     isPublic: false,
-    hasDetail: true
+    hasDetail: false
   },
   {
     id: 12,
     title: "EQUIP Licencias",
     description: "Sistema de gestión de licencias de las aplicaciones de EQUIP Electronics.",
     technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
-    image: "/images/equip-licencias.jpg",
+    image: "/images/apps/equiplicencias.jpg",
     liveUrl: null,
     githubUrl: null,
     isPublic: false,
@@ -145,7 +145,7 @@ const webProjectsData = [
     title: "EQUIP BA",
     description: "Plataforma de gestión de business analytics con dashboards y reportes personalizables.",
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
-    image: "/images/equip-ba.jpg",
+    image: "/images/apps/equipba.jpg",
     liveUrl: null,
     githubUrl: null,
     isPublic: false,

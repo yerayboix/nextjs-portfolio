@@ -66,9 +66,14 @@ const Navbar = () => {
                             <button
                                 key={item.name}
                                 onClick={() => scrollToSection(item.href)}
-                                className="text-custom-light hover:text-custom-light-2 transition-colors duration-200 font-pt-mono text-sm"
+                                className="text-custom-light hover:text-custom-light-2 transition-colors duration-200 font-pt-mono text-sm cursor-pointer"
                             >
-                                {item.name}
+                                <HyperText
+                                    fontClassName="font-pt-mono"
+                                    animateOnHover={false}
+                                >
+                                    {item.name}
+                                </HyperText>
                             </button>
                         ))}
                         <AvailabilityIndicator variant="badge" text="Disponible" />
