@@ -66,7 +66,7 @@ const webProjectsData = [
   },
   {
     id: 6,
-    title: "BARCOS",
+    title: "Poseidon Analytics",
     description: "Plataforma de gestión de flotas de barcos y gestión de rutas de navegación.",
     technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "PostgreSQL", "Docker", "Git"],
     image: null,
@@ -440,7 +440,7 @@ const MobileLayout = () => {
           
           {/* Tools Section */}
           <div>
-            <h2 className="text-2xl font-new-title font-semibold text-custom-light-2 mb-4 text-center">
+            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-4 text-center">
               Herramientas y APIs
             </h2>
             <div className="space-y-4">

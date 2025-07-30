@@ -25,7 +25,7 @@ const Navbar = () => {
 
     const navItems = [
         { name: "Home", href: "/" },
-        { name: "Sobre mí", href: "/#about" },
+        { name: "Habilidades", href: "/#about" },
         { name: "Proyectos", href: "/#projects" },
         { name: "Contacto", href: "/contact" },
     ];
@@ -35,7 +35,14 @@ const Navbar = () => {
         // Es un enlace interno con hash, hacer scroll
         const element = document.querySelector(href.substring(1));
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          const navbarHeight = 64; // Altura de la navbar (h-16 = 64px)
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
         }
       }
     };

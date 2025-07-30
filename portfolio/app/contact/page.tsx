@@ -2,7 +2,7 @@
 import { Particles } from "@/components/magicui/particles";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
+import { Mail, Linkedin, Github, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 
@@ -20,6 +20,13 @@ const contactData = [
     icon: Linkedin,
     href: "https://linkedin.com/in/yerayboix",
     description: "Conecta conmigo profesionalmente"
+  },
+  {
+    name: "Teléfono",
+    value: "+34 666 854 603",
+    icon: Phone,
+    href: "tel:+34666854603",
+    description: "Llámame directamente"
   },
   // {
   //   name: "GitHub",
@@ -92,7 +99,7 @@ const DesktopLayout = () => {
       
       <div className="hidden md:flex flex-1 px-8 pb-8 relative z-10">
         <div className="w-full max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-3 gap-8">
             {contactData.map((contact) => (
               <ContactCard key={contact.name} contact={contact} />
             ))}

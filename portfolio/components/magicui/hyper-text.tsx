@@ -39,7 +39,7 @@ export function HyperText({
   children,
   className,
   fontClassName,
-  duration = 600,
+  duration = 1500,
   delay = 0,
   as: Component = "div",
   startOnView = false,

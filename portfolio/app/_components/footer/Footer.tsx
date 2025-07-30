@@ -1,5 +1,5 @@
 "use client"
-import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
+import { Mail, Linkedin, Github, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 
 const currentYear = new Date().getFullYear();
@@ -16,6 +16,12 @@ const footerData = [
     value: "yerayboix",
     icon: Linkedin,
     href: "https://linkedin.com/in/yerayboix",
+  },
+  {
+    name: "Teléfono",
+    value: "+34 666 854 603",
+    icon: Phone,
+    href: "tel:+34666854603",
   },
   // {
   //   name: "GitHub",
@@ -55,7 +61,7 @@ const DesktopFooter = () => {
           <div className="flex items-center gap-4">
             <MessageCircle className="w-4 h-4 text-custom-light/60" />
             <span className="text-custom-light/60 font-pt-mono text-sm">
-              Respuesta en 24 horas
+              Respuesta muy rápida
             </span>
           </div>
         </div>
@@ -92,7 +98,7 @@ const MobileFooter = () => {
           <div className="flex items-center gap-3">
             <MessageCircle className="w-4 h-4 text-custom-light/60" />
             <span className="text-custom-light/60 font-pt-mono text-xs">
-              Respuesta en 24 horas
+              Respuesta muy rápida
             </span>
           </div>
         </div>
