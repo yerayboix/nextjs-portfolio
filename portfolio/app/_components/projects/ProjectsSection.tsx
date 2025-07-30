@@ -2,6 +2,7 @@
 import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { LinkPreview } from "@/components/ui/link-preview";
 import { Settings, Database, Terminal, Code, Server, Cpu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -157,7 +158,7 @@ const webProjectsData = [
     description: "Plataforma de obtención de las mejores ofertas para productos de oficina scrappeado directamente desde Amazon y notificaciones mediante Telegram.",
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Celery", "Redis", "Supabase", "Docker", "Git"],
     image: "/images/apps/deoficina.jpg",
-    liveUrl: "https://deoficina.com",
+    liveUrl: "https://deoficina.es",
     githubUrl: null,
     isPublic: true,
     hasDetail: false
@@ -261,14 +262,17 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
 
         <CardFooter className="flex flex-wrap gap-3 pt-2 p-4 mt-auto">
           {project.liveUrl && (
-            <Link
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-custom-light-2 text-background rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/90 transition-colors duration-200"
+            <LinkPreview
+              url={project.liveUrl}
+              className="inline-block"
             >
-              Ver Proyecto
-            </Link>
+              <button
+                onClick={() => window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
+                className="px-4 py-2 bg-custom-light-2 text-background rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/90 transition-colors duration-200 cursor-pointer"
+              >
+                Ver Proyecto
+              </button>
+            </LinkPreview>
           )}
           {project.hasDetail && (
             <Link
