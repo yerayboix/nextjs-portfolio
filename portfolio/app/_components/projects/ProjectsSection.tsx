@@ -10,33 +10,153 @@ import Link from "next/link";
 const webProjectsData = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "Plataforma completa de comercio electrónico con sistema de pagos, gestión de inventario y panel de administración.",
-    technologies: ["Next.js", "React", "TypeScript", "Stripe", "PostgreSQL"],
-    image: "/images/project1.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/example/project",
-    isPublic: true
+    title: "EQUIP HR",
+    description: "Sistema de gestión de control horario, módulo de solicitud de vacaciones y generación de informes por usuario.",
+    technologies: ["Django", "Python", "PostgreSQL", "Docker", "Git"],
+    image: "/images/equip-hr.jpg",
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
   },
   {
     id: 2,
-    title: "Dashboard Analytics",
-    description: "Dashboard interactivo para análisis de datos en tiempo real con gráficos y métricas personalizables.",
-    technologies: ["React", "D3.js", "Node.js", "MongoDB", "WebSocket"],
-    image: "/images/project3.jpg",
-    liveUrl: "https://dashboard.example.com",
-    githubUrl: "https://github.com/example/dashboard",
-    isPublic: true
+    title: "EQUIP CRM",
+    description: "Sistema de gestión de relaciones con clientes para optimizar ventas y seguimiento comercial.",
+    technologies: ["Django", "Python", "PostgreSQL", "Docker", "Git"],
+    image: null,
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
   },
   {
     id: 3,
-    title: "Portfolio Personal",
-    description: "Portfolio personal desarrollado con Next.js y TypeScript, con diseño moderno y animaciones fluidas.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Magic UI"],
-    image: null,
-    liveUrl: "https://yerayboix.com",
-    githubUrl: "https://github.com/yerayboix/portfolio",
+    title: "Bufanuvols",
+    description: "Plataforma interna de gestión de dispositivos de EQUIP Electronics.",
+    technologies: ["Django", "Django REST Framework", "Python", "MQTT", "RabbitMQ", "PostgreSQL", "Docker", "Git"],
+    image: "/images/bufanuvols.jpg",
+    liveUrl: "https://bufanuvols.cloud/",
+    githubUrl: null,
     isPublic: true
+  },
+  {
+    id: 4,
+    title: "MYRECARGA",
+    description: "Plataforma para la ingesta, muestra y envío de datos de estaciones de recarga de vehículos eléctricos a plataforma IoT.",
+    technologies: ["Django", "Django REST Framework", "Python", "IoT", "PostgreSQL", "Docker", "Git"],
+    image: "/images/myre carga.jpg",
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
+  },
+  {
+    id: 5,
+    title: "CLOUDSENSORS",
+    description: "Plataforma de ingesta, tratamiento y visualización de datos de sensores provenientes de maquinaria pesada.",
+    technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Apache Druid", "Apache Airflow", "PostgreSQL", "Docker", "Kubernetes", "Git"],
+    image: "/images/cloudsensors.jpg",
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
+  },
+  {
+    id: 6,
+    title: "BARCOS",
+    description: "Plataforma de gestión de flotas de barcos y gestión de rutas de navegación.",
+    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
+    image: null,
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
+  },
+  {
+    id: 7,
+    title: "Llanos del Hospital",
+    description: "Web para el hotel Llanos del Hospital y SFTP para la gestión de archivos.",
+    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
+    image: "/images/llanos-hospital.jpg",
+    liveUrl: "https://llanosdelhospital.com",
+    githubUrl: null,
+    isPublic: true
+  },
+  {
+    id: 8,
+    title: "Qualideep",
+    description: "Web para promocionar Qualideep, un sistema de gestión de calidad y auditorías para empresas con el uso de IA.",
+    technologies: ["Next.js", "React", "TypeScript", "Docker", "Git"],
+    image: "/images/qualideep.jpg",
+    liveUrl: "https://qualideep.com",
+    githubUrl: null,
+    isPublic: true
+  },
+  {
+    id: 9,
+    title: "Revantik",
+    description: "Web para promocionar Revantik, partner de Odoo enfocado en el sector industrial.",
+    technologies: ["Next.js", "React", "TypeScript"],
+    image: "/images/revantik.jpg",
+    liveUrl: "https://revantik.com",
+    githubUrl: null,
+    isPublic: true
+  },
+  {
+    id: 10,
+    title: "Proteu",
+    description: "Sistema para la gestión de laboratorios y almacenamiento y muestra de resultados de análisis de laboratorio.",
+    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
+    image: "/images/proteu.jpg",
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
+  },
+  {
+    id: 11,
+    title: "Solutia Gestión Ausencias",
+    description: "Sistema para la gestión de ausencias, importación de ficheros FIE y configuración de alarmas para notificaciones.",
+    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Kubernetes", "Git"],
+    image: null,
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
+  },
+  {
+    id: 12,
+    title: "EQUIP Licencias",
+    description: "Sistema de gestión de licencias de las aplicaciones de EQUIP Electronics.",
+    technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
+    image: "/images/equip-licencias.jpg",
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
+  },
+  {
+    id: 13,
+    title: "EQUIP BA",
+    description: "Plataforma de gestión de business analytics con dashboards y reportes personalizables.",
+    technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
+    image: "/images/equip-ba.jpg",
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
+  },
+  {
+    id: 14,
+    title: "DeOficina",
+    description: "Solución de gestión de oficinas y espacios de trabajo con reservas y control de acceso.",
+    technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Supabase", "Docker", "Git"],
+    image: "/images/deoficina.jpg",
+    liveUrl: "https://deoficina.com",
+    githubUrl: null,
+    isPublic: true
+  },
+  {
+    id: 15,
+    title: "Gestión Inventario y Facturación",
+    description: "Sistema completo de gestión de inventario, facturación y control de stock en tiempo real.",
+    technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Supabase", "Docker", "Git"],
+    image: "/images/gestion-inventario.jpg",
+    liveUrl: null,
+    githubUrl: null,
+    isPublic: false
   }
 ];
 
@@ -44,30 +164,21 @@ const webProjectsData = [
 const toolsData = [
   {
     id: 1,
-    title: "API de Gestión de Datos",
-    description: "API RESTful para gestión de datos empresariales con autenticación JWT y documentación automática.",
-    technologies: ["Django", "Django REST", "Python", "PostgreSQL", "Docker"],
-    githubUrl: "https://github.com/example/api",
+    title: "TRAGAPINYOLS",
+    description: "Puente entre las conexiones MQTT de dispositivos de Bufanuvols y almacenamiento de datos.",
+    technologies: ["Python", "MQTT", "PostgreSQL", "Docker", "Git"],
+    githubUrl: null,
     isPublic: false,
-    icon: Database
-  },
-  {
-    id: 2,
-    title: "CLI Tool para DevOps",
-    description: "Herramienta de línea de comandos para automatizar tareas de DevOps y despliegues.",
-    technologies: ["Python", "Click", "Docker", "Kubernetes", "Git"],
-    githubUrl: "https://github.com/example/cli-tool",
-    isPublic: true,
     icon: Terminal
   },
   {
-    id: 3,
-    title: "Data Processing Pipeline",
-    description: "Pipeline de procesamiento de datos con ETL automatizado y transformaciones complejas.",
-    technologies: ["Python", "Apache Airflow", "PostgreSQL", "Redis", "Celery"],
-    githubUrl: "https://github.com/example/data-pipeline",
+    id: 2,
+    title: "WEBTOOLS",
+    description: "Suite de distintas herramientas útiles tales y como descarga de vídeos de Youtube y conversión.",
+    technologies: ["Next.js", "React", "TypeScript", "Flask", "Python", "SQLite", "Docker", "Git"],
+    githubUrl: null,
     isPublic: false,
-    icon: Server
+    icon: Settings
   }
 ];
 
@@ -81,7 +192,7 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
         gradientOpacity={0.6}
         gradientFrom="#ffffff"
         gradientTo="#e5e5e5"
-        className="p-0"
+        className="p-0 h-full flex flex-col"
       >
         <CardHeader className="p-4">
           {/* Image or Placeholder */}
@@ -131,7 +242,7 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
           </div>
         </CardContent>
 
-        <CardFooter className="flex flex-wrap gap-3 pt-2 p-4">
+        <CardFooter className="flex flex-wrap gap-3 pt-2 p-4 mt-auto">
           {project.liveUrl && (
             <Link
               href={project.liveUrl}
@@ -142,16 +253,12 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
               Ver Proyecto
             </Link>
           )}
-          {project.githubUrl && (
-            <Link
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
-            >
-              {project.isPublic ? "Ver Código" : "Detalles"}
-            </Link>
-          )}
+          <Link
+            href={`/projects/${project.id}`}
+            className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
+          >
+            Ver Detalle
+          </Link>
         </CardFooter>
       </MagicCard>
     </Card>
@@ -168,7 +275,7 @@ const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
         gradientOpacity={0.5}
         gradientFrom="#64b5f6"
         gradientTo="#42a5f5"
-        className="p-0"
+        className="p-0 h-full flex flex-col"
       >
         <CardHeader className="p-4">
           {/* Icon and Title */}
@@ -200,17 +307,13 @@ const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
           </div>
         </CardContent>
 
-        <CardFooter className="flex flex-wrap gap-3 pt-2 p-4">
-          {tool.githubUrl && (
-            <Link
-              href={tool.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
-            >
-              {tool.isPublic ? "Ver Código" : "Detalles"}
-            </Link>
-          )}
+        <CardFooter className="flex flex-wrap gap-3 pt-2 p-4 mt-auto">
+          <Link
+            href={`/tools/${tool.id}`}
+            className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
+          >
+            Ver Detalle
+          </Link>
         </CardFooter>
       </MagicCard>
     </Card>
@@ -219,6 +322,13 @@ const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
 
 // Desktop Layout Component
 const DesktopLayout = () => {
+  // Sort projects: public first, then private
+  const sortedWebProjects = [...webProjectsData].sort((a, b) => {
+    if (a.isPublic && !b.isPublic) return -1;
+    if (!a.isPublic && b.isPublic) return 1;
+    return 0;
+  });
+
   return (
     <>
       <div className="hidden md:flex justify-start pt-8 pb-8 px-8 relative z-10">
@@ -242,7 +352,7 @@ const DesktopLayout = () => {
               Desarrollos Web
             </h2>
             <div className="grid grid-cols-2 gap-8">
-              {webProjectsData.map((project) => (
+              {sortedWebProjects.map((project) => (
                 <WebProjectCard key={project.id} project={project} />
               ))}
             </div>
@@ -267,6 +377,13 @@ const DesktopLayout = () => {
 
 // Mobile Layout Component
 const MobileLayout = () => {
+  // Sort projects: public first, then private
+  const sortedWebProjects = [...webProjectsData].sort((a, b) => {
+    if (a.isPublic && !b.isPublic) return -1;
+    if (!a.isPublic && b.isPublic) return 1;
+    return 0;
+  });
+
   return (
     <>
       <div className="md:hidden flex justify-start pt-8 pb-8 px-8 relative z-10">
@@ -290,7 +407,7 @@ const MobileLayout = () => {
               Desarrollos Web
             </h2>
             <div className="space-y-6">
-              {webProjectsData.map((project) => (
+              {sortedWebProjects.map((project) => (
                 <WebProjectCard key={project.id} project={project} />
               ))}
             </div>
