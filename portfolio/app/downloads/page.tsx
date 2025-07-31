@@ -16,7 +16,7 @@ export default function DownloadsPage() {
       title: "CV - Currículum Vitae",
       description: "Mi currículum vitae actualizado con toda mi experiencia profesional y formación",
       icon: FileText,
-      link: "https://drive.google.com/file/d/1_es-UOPnEJe8Pv7saiQRkPP70pZdWpBj/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1OF6OqTaQuS5TeRoiMx7lv7f3_oGaDMEi/view?usp=sharing",
       color: "from-white to-gray-100"
     },
     {
