@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { AvailabilityIndicator } from "@/components/ui/availability-indicator";
 import {
@@ -64,9 +65,11 @@ const Navbar = () => {
                         }`}>
                         <Link href="/" className="flex items-center space-x-3">
                             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-custom-light/20">
-                                <img
+                                <Image
                                     src="/images/yeray_navbar.jpg"
                                     alt="Yeray Boix Torner"
+                                    width={40}
+                                    height={40}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
@@ -130,9 +133,11 @@ const Navbar = () => {
                 <SheetHeader className="mb-8">
                   <SheetTitle className="text-custom-light font-new-title text-4xl flex items-center space-x-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-custom-light/20">
-                      <img
+                      <Image
                         src="/images/yeray_navbar.jpg"
                         alt="Yeray Boix Torner"
+                        width={48}
+                        height={48}
                         className="w-full h-full object-cover"
                       />
                     </div>
