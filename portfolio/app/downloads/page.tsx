@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { HyperText } from "@/components/magicui/hyper-text";
+import { Particles } from "@/components/magicui/particles";
 import Navbar from "@/components/navbar";
 import { FileText, Mail } from "lucide-react";
 
@@ -38,7 +39,14 @@ export default function DownloadsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-custom-dark">
+    <div className="min-h-screen bg-custom-dark relative">
+      <Particles
+        className="absolute inset-0 z-10"
+        quantity={100}
+        staticity={30}
+        color="#ffffff"
+        size={0.4}
+      />
       <Navbar />
       
       {/* Hero Section */}
