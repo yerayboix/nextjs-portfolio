@@ -28,7 +28,15 @@ export default function MobileLayout() {
               fontClassName="font-new-title"
               animateOnHover={false}
             >
-              YERAY BOIX TORNER
+              YERAY BOIX
+            </HyperText>
+            <HyperText 
+              as="h1" 
+              className="text-8xl md:text-8xl font-new-title font-bold text-custom-light-2"
+              fontClassName="font-new-title"
+              animateOnHover={false}
+            >
+              TORNER
             </HyperText>
           </div>
           <HyperText 
