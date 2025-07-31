@@ -62,7 +62,14 @@ const Navbar = () => {
                             ? "opacity-100 transform translate-x-0"
                             : "opacity-0 transform -translate-x-4"
                         }`}>
-                        <Link href="/">
+                        <Link href="/" className="flex items-center space-x-3">
+                            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-custom-light/20">
+                                <img
+                                    src="/images/yeray_navbar.jpg"
+                                    alt="Yeray Boix Torner"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                             <HyperText
                                 as="span"
                                 className="text-3xl font-new-title font-bold text-custom-light-2"
@@ -121,8 +128,15 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent side="right" className="bg-custom-dark/95 backdrop-blur-md border-l border-custom-light/20 p-6">
                 <SheetHeader className="mb-8">
-                  <SheetTitle className="text-custom-light font-new-title text-4xl">
-                    YERAY BOIX TORNER
+                  <SheetTitle className="text-custom-light font-new-title text-4xl flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-custom-light/20">
+                      <img
+                        src="/images/yeray_navbar.jpg"
+                        alt="Yeray Boix Torner"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span>YERAY BOIX TORNER</span>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="space-y-4">
