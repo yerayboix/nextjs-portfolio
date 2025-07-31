@@ -239,7 +239,7 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
 
         <CardContent className="space-y-4 flex-1 p-4">
           <div>
-            <CardTitle className="text-xl md:text-2xl font-new-title font-semibold text-custom-light-2 mb-2">
+            <CardTitle className="text-3xl md:text-3xl font-new-title font-semibold text-custom-light-2 mb-2">
               {project.title}
             </CardTitle>
             <p className="text-sm font-pt-mono text-custom-light-2/80 leading-relaxed">
@@ -358,7 +358,7 @@ const DesktopLayout = () => {
     <>
       <div className="hidden md:flex justify-start pt-8 pb-8 px-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-custom-light-2 text-center md:text-left">
+          <h1 className="text-4xl md:text-8xl lg:text-9xl font-new-title font-bold text-custom-light-2 text-center md:text-left">
             Proyectos
           </h1>
           <div className="text-center md:text-left">
@@ -413,7 +413,7 @@ const MobileLayout = () => {
     <>
       <div className="md:hidden flex justify-start pt-8 pb-8 px-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-custom-light-2 text-center">
+          <h1 className="text-6xl lg:text-9xl font-new-title font-bold text-custom-light-2 text-center">
             Proyectos
           </h1>
           <div className="text-center">
@@ -428,7 +428,7 @@ const MobileLayout = () => {
       <div className="md:hidden flex-1 px-6 pb-8 relative z-10">
         <div className="space-y-8">
           <div>
-            <h2 className="text-2xl font-new-title font-semibold text-custom-light-2 mb-4 text-center">
+            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-4 text-center">
               Desarrollos Web
             </h2>
             <div className="space-y-6">
