@@ -1,5 +1,5 @@
 "use client"
-import { Mail, Linkedin, Github, MessageCircle, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, MessageCircle, Phone, FileText } from "lucide-react";
 import Link from "next/link";
 
 const currentYear = new Date().getFullYear();
@@ -10,24 +10,35 @@ const footerData = [
     value: "yerayboix@gmail.com",
     icon: Mail,
     href: "mailto:yerayboix@gmail.com",
+    external: true
   },
   {
     name: "LinkedIn",
     value: "yerayboix",
     icon: Linkedin,
     href: "https://linkedin.com/in/yerayboix",
+    external: true
   },
   {
     name: "Teléfono",
     value: "+34 666 854 603",
     icon: Phone,
     href: "tel:+34666854603",
+    external: true
+  },
+  {
+    name: "Descargas",
+    value: "CV y documentos",
+    icon: FileText,
+    href: "/downloads",
+    external: false
   },
   // {
   //   name: "GitHub",
   //   value: "yerayboix",
   //   icon: Github,
   //   href: "https://github.com/yerayboix",
+  //   external: true
   // }
 ];
 
@@ -37,8 +48,8 @@ const FooterLink = ({ item }: { item: typeof footerData[0] }) => {
   return (
     <Link 
       href={item.href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={item.external ? "_blank" : undefined}
+      rel={item.external ? "noopener noreferrer" : undefined}
       className="flex items-center gap-2 text-custom-light/60 hover:text-custom-light transition-colors duration-200"
     >
       <IconComponent className="w-4 h-4" />
