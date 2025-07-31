@@ -2,9 +2,10 @@
 import { Particles } from "@/components/magicui/particles";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Linkedin, Github, MessageCircle, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, MessageCircle, Phone, Copy, Check } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
+import { useState } from "react";
 
 const contactData = [
   {
@@ -39,6 +40,19 @@ const contactData = [
 
 const ContactCard = ({ contact }: { contact: typeof contactData[0] }) => {
   const IconComponent = contact.icon;
+  const [copied, setCopied] = useState(false);
+  
+  const handleCopyEmail = async () => {
+    if (contact.name === "Email") {
+      try {
+        await navigator.clipboard.writeText(contact.value);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.error('Failed to copy email:', err);
+      }
+    }
+  };
   
   return (
     <Card className="bg-custom-dark/50 backdrop-blur-sm border-custom-light/20 hover:border-custom-light/40 transition-all duration-300">
@@ -47,25 +61,36 @@ const ContactCard = ({ contact }: { contact: typeof contactData[0] }) => {
           <div className="p-2 bg-custom-light/10 rounded-lg">
             <IconComponent className="w-5 h-5 text-custom-light" />
           </div>
-          <CardTitle className="text-custom-light font-new-title text-lg">
+          <CardTitle className="text-custom-light font-new-title text-3xl">
             {contact.name}
           </CardTitle>
         </div>
       </CardHeader>
       <CardContent className="pt-0">
-        <Link 
-          href={contact.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block group"
-        >
-          <p className="text-custom-light-2 font-pt-mono text-sm mb-2 group-hover:text-custom-light transition-colors duration-200">
-            {contact.value}
-          </p>
-          <p className="text-custom-light/60 font-pt-mono text-xs">
-            {contact.description}
-          </p>
-        </Link>
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <p className="text-custom-light-2 font-pt-mono text-sm mb-2">
+              {contact.value}
+            </p>
+            <p className="text-custom-light/60 font-pt-mono text-xs">
+              {contact.description}
+            </p>
+          </div>
+          
+          {contact.name === "Email" && (
+            <button
+              onClick={handleCopyEmail}
+              className="ml-3 p-2 cursor-pointer rounded-lg bg-custom-light/10 hover:bg-custom-light/20 transition-all duration-200 group"
+              title="Copiar email"
+            >
+              {copied ? (
+                <Check className="w-4 h-4 text-green-400" />
+              ) : (
+                <Copy className="w-4 h-4 text-custom-light group-hover:text-custom-light-2" />
+              )}
+            </button>
+          )}
+        </div>
       </CardContent>
     </Card>
   );
@@ -114,12 +139,33 @@ const DesktopLayout = () => {
             >
               ¿Prefieres hablar directamente? No dudes en contactarme por cualquiera de estos medios.
             </HyperText>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4 mb-8">
               <MessageCircle className="w-5 h-5 text-custom-light/60" />
               <span className="text-custom-light/60 font-pt-mono text-sm">
                 Respuesta garantizada en 24 horas
               </span>
             </div>
+            
+            {/* Back to Home Button */}
+            <Link
+              href="/"
+              className="inline-flex items-center px-6 py-3 rounded-lg border border-custom-light/20 text-custom-light hover:text-custom-light-2 hover:border-custom-light/40 transition-all duration-200 font-pt-mono text-sm"
+            >
+              <svg 
+                className="w-4 h-4 mr-2" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18" 
+                />
+              </svg>
+              Volver al Inicio
+            </Link>
           </div>
         </div>
       </div>
@@ -169,12 +215,33 @@ const MobileLayout = () => {
           >
             ¿Prefieres hablar directamente?
           </HyperText>
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3 mb-6">
             <MessageCircle className="w-4 h-4 text-custom-light/60" />
             <span className="text-custom-light/60 font-pt-mono text-xs">
               Respuesta en 24 horas
             </span>
           </div>
+          
+          {/* Back to Home Button */}
+          <Link
+            href="/"
+            className="inline-flex items-center px-6 py-3 rounded-lg border border-custom-light/20 text-custom-light hover:text-custom-light-2 hover:border-custom-light/40 transition-all duration-200 font-pt-mono text-sm"
+          >
+            <svg 
+              className="w-4 h-4 mr-2" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M10 19l-7-7m0 0l7-7m-7 7h18" 
+              />
+            </svg>
+            Volver al Inicio
+          </Link>
         </div>
       </div>
     </>
