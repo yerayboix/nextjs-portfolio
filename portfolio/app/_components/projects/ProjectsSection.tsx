@@ -2,10 +2,10 @@
 import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { LinkPreview } from "@/components/ui/link-preview";
-import { Settings, Database, Terminal, Code, Server, Cpu } from "lucide-react";
+import { Settings, Terminal, Code } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 // Data for web projects
 const webProjectsData = [
@@ -262,17 +262,18 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
 
         <CardFooter className="flex flex-wrap gap-3 pt-2 p-4 mt-auto">
           {project.liveUrl && (
-            <LinkPreview
-              url={project.liveUrl}
+            <Link
+              href={project.liveUrl}
               className="inline-block"
+              target="_blank"
             >
-              <button
-                onClick={() => window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
-                className="px-4 py-2 bg-custom-light-2 text-background rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/90 transition-colors duration-200 cursor-pointer"
+              <Button
+                variant="default"
+                className="font-pt-mono cursor-pointer"
               >
                 Ver Proyecto
-              </button>
-            </LinkPreview>
+              </Button>
+            </Link>
           )}
           {project.hasDetail && (
             <Link
