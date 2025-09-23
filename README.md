@@ -1,6 +1,6 @@
 # Yeray Boix Torner - Portfolio
 
-A modern, responsive portfolio website built with Next.js 15, showcasing professional skills, projects, and experience. Features smooth animations, and a clean, professional design.
+A modern, responsive portfolio website built with Next.js 15, showcasing professional skills, projects, and experience. Features smooth animations, and a clean, professional design. Feel free to use it for your own.
 
 ## 🚀 Features
 
