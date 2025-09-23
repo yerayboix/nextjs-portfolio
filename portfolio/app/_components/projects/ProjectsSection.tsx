@@ -12,7 +12,7 @@ const webProjectsData = [
   {
     id: 1,
     title: "EQUIP HR",
-    description: "Sistema de gestión de control horario, módulo de solicitud de vacaciones y generación de informes por usuario.",
+    description: "Sistema de gestión de control horario, módulo de solicitud de vacaciones y generación de informes de horas trabajadas por usuario.",
     technologies: ["Django", "Python", "PostgreSQL", "Docker", "Git"],
     image: "/images/apps/equiphr.jpg",
     liveUrl: null,
@@ -23,7 +23,7 @@ const webProjectsData = [
   {
     id: 2,
     title: "EQUIP CRM",
-    description: "Sistema de gestión de relaciones con clientes para optimizar ventas y seguimiento comercial.",
+    description: "Sistema de gestión de relaciones con clientes para optimizar ventas y seguimiento comercial. Gestión de contactos, oportunidades, informes anuales, etc.",
     technologies: ["Django", "Python", "Celery", "Redis", "PostgreSQL", "Docker", "Git"],
     image: null,
     liveUrl: null,
@@ -34,7 +34,7 @@ const webProjectsData = [
   {
     id: 3,
     title: "Bufanuvols",
-    description: "Plataforma interna de gestión de dispositivos de EQUIP Electronics.",
+    description: "Plataforma interna de gestión de dispositivos de EQUIP Electronics. Consultar estados, actualizar firmware, etc.",
     technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "MQTT", "RabbitMQ", "PostgreSQL", "Docker", "Git"],
     image: "/images/apps/bufanuvols.jpg",
     liveUrl: "https://bufanuvols.cloud/",
@@ -111,7 +111,7 @@ const webProjectsData = [
   {
     id: 10,
     title: "Proteu",
-    description: "Sistema para la gestión de laboratorios y almacenamiento y muestra de resultados de análisis de laboratorio.",
+    description: "Sistema para la gestión de múltiples laboratorios. Almacenamiento y muestra de resultados de análisis provenientes de IA.",
     technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
     image: "/images/apps/proteu.jpg",
     liveUrl: null,
@@ -122,7 +122,7 @@ const webProjectsData = [
   {
     id: 11,
     title: "Solutia Gestión Ausencias",
-    description: "Sistema para la gestión de ausencias, importación de ficheros FIE y configuración de alarmas para notificaciones.",
+    description: "Sistema para la gestión de ausencias de trabajadores, importación de ficheros FIE y configuración de alarmas para notificaciones a altos cargos en función de los parámetros establecidos.",
     technologies: ["Django", "Django REST Framework", "Python", "Celery", "Redis", "PostgreSQL", "Docker", "Kubernetes", "Git"],
     image: null,
     liveUrl: null,
@@ -133,7 +133,7 @@ const webProjectsData = [
   {
     id: 12,
     title: "EQUIP Licencias",
-    description: "Sistema de gestión de licencias de las aplicaciones de EQUIP Electronics.",
+    description: "Sistema de gestión de licencias de las aplicaciones de EQUIP Electronics. Poder registrar, renovar y gestionar las licencias de las aplicaciones.",
     technologies: ["Django", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
     image: "/images/apps/equiplicencias.jpg",
     liveUrl: null,
@@ -144,7 +144,7 @@ const webProjectsData = [
   {
     id: 13,
     title: "EQUIP BA",
-    description: "Plataforma de gestión de business analytics con dashboards y reportes personalizables.",
+    description: "Plataforma para llevar a cabo el análisis de la contabilidad, gastos, inversiones, etc. Informes anuales y mensuales para EQUIP Electronics.",
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "PostgreSQL", "Docker", "Git"],
     image: "/images/apps/equipba.jpg",
     liveUrl: null,
@@ -155,7 +155,7 @@ const webProjectsData = [
   {
     id: 14,
     title: "DeOficina",
-    description: "Plataforma de obtención de las mejores ofertas para productos de oficina scrappeado directamente desde Amazon y notificaciones mediante Telegram.",
+    description: "Plataforma de afiliados para la obtención de las mejores ofertas para productos de oficina scrappeando los productos directamente desde Amazon y notificaciones mediante Telegram.",
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Celery", "Redis", "Supabase", "Docker", "Git"],
     image: "/images/apps/deoficina.jpg",
     liveUrl: "https://deoficina.es",
@@ -166,7 +166,7 @@ const webProjectsData = [
   {
     id: 15,
     title: "Gestión Inventario y Facturación",
-    description: "Sistema completo de gestión de inventario de libros, facturación y control de stock en tiempo real.",
+    description: "Sistema completo de gestión de inventario de libros, facturación y control de stock en tiempo real para un almacen local.",
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Supabase", "Docker", "Git"],
     image: "/images/apps/gestioninventario.jpg",
     liveUrl: null,
@@ -181,7 +181,7 @@ const toolsData = [
   {
     id: 1,
     title: "TRAGAPINYOLS",
-    description: "Puente entre las conexiones MQTT de dispositivos de Bufanuvols y almacenamiento de datos.",
+    description: "Puente entre las conexiones MQTT de dispositivos de Bufanuvols y almacenamiento de datos. El sistema procesa todos los datos recibidos en las distintas conexiones MQTT y los almacena en una base de datos PostgreSQL.",
     technologies: ["Python", "MQTT", "PostgreSQL", "Docker", "Git"],
     githubUrl: null,
     isPublic: false,
@@ -389,7 +389,7 @@ const DesktopLayout = () => {
             <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-6">
               Herramientas y APIs
             </h2>
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 gap-6">
               {toolsData.map((tool) => (
                 <ToolCard key={tool.id} tool={tool} />
               ))}
