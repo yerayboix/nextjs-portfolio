@@ -11,9 +11,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     // Set initial scroll state
@@ -35,6 +38,40 @@ const Navbar = () => {
     { name: "Contacto", href: "/contact" },
   ];
 
+  const handleNavigation = (href: string) => {
+    setOpen(false);
+    
+    // Si el enlace contiene un hash (anchor) y estamos en la página principal
+    if (href.includes('#')) {
+      const [path, hash] = href.split('#');
+      const currentPath = window.location.pathname;
+      
+      // Si ya estamos en la página correcta, hacer scroll suave
+      if (currentPath === path || (path === '/' && currentPath === '/')) {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+          return;
+        }
+      }
+    }
+    
+    // Si es navegación a la home desde la home
+    if (href === "/" && window.location.pathname === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+    
+    // Para cualquier otra navegación, usar Next.js router
+    router.push(href);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
@@ -49,7 +86,10 @@ const Navbar = () => {
             ? "opacity-100 transform translate-x-0"
             : "opacity-0 transform -translate-x-4"
             }`}>
-            <Link href="/" className="flex items-center space-x-3">
+            <button 
+              onClick={() => handleNavigation("/")}
+              className="flex items-center space-x-3 cursor-pointer"
+            >
               <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-custom-light/20">
                 <Image
                   src="/images/yeray_navbar.jpg"
@@ -67,15 +107,15 @@ const Navbar = () => {
               >
                 YERAY BOIX TORNER
               </HyperText>
-            </Link>
+            </button>
           </div>
 
           {/* Desktop Navigation - Right side */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleNavigation(item.href)}
                 className="text-custom-light hover:text-custom-light-2 transition-colors duration-200 font-pt-mono text-sm cursor-pointer"
               >
                 <HyperText
@@ -84,14 +124,14 @@ const Navbar = () => {
                 >
                   {item.name}
                 </HyperText>
-              </Link>
+              </button>
             ))}
             <AvailabilityIndicator variant="badge" text="Disponible" />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Sheet>
+            <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <button className="text-custom-light hover:text-custom-light-2 transition-colors duration-200">
                   <svg
@@ -126,13 +166,13 @@ const Navbar = () => {
                 </SheetHeader>
                 <div className="space-y-4">
                   {navItems.map((item) => (
-                    <Link
+                    <button
                       key={item.name}
-                      href={item.href}
+                      onClick={() => handleNavigation(item.href)}
                       className="block w-full text-left px-6 py-4 text-custom-light hover:text-custom-light-2 hover:bg-custom-light/10 transition-all duration-200 font-pt-mono text-base rounded-lg border border-transparent hover:border-custom-light/20"
                     >
                       {item.name}
-                    </Link>
+                    </button>
                   ))}
                   <div className="px-6 py-4">
                     <AvailabilityIndicator variant="badge" text="Disponible" />
@@ -142,8 +182,6 @@ const Navbar = () => {
             </Sheet>
           </div>
         </div>
-
-
       </div>
     </nav>
   );
