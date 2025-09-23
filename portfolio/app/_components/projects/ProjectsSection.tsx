@@ -457,7 +457,7 @@ const MobileLayout = () => {
 
 export default function ProjectsSection() {
     return (
-        <section id="projects" className="flex flex-col bg-background min-h-screen relative overflow-hidden">
+        <section id="projects" className="flex flex-col bg-background min-h-screen relative overflow-hidden pt-10">
             {/* Particles Background */}
             <div className="absolute inset-0 z-0">
                 <Particles

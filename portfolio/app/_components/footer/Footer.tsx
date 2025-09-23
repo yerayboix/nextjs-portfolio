@@ -60,7 +60,7 @@ const FooterLink = ({ item }: { item: typeof footerData[0] }) => {
 
 const DesktopFooter = () => {
   return (
-    <footer className="hidden md:block bg-custom-dark/50 backdrop-blur-sm border-t border-custom-light/20 relative z-30">
+    <footer className="hidden md:block bg-custom-dark backdrop-blur-sm border-t border-custom-light/20 relative z-30">
       <div className="max-w-6xl mx-auto px-8 py-12">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
@@ -97,10 +97,10 @@ const DesktopFooter = () => {
 
 const MobileFooter = () => {
   return (
-    <footer className="md:hidden bg-custom-dark/50 backdrop-blur-sm border-t border-custom-light/20 relative z-30">
+    <footer className="md:hidden bg-custom-dark backdrop-blur-sm border-t border-custom-light/20 relative z-30">
       <div className="px-6 py-8">
-        <div className="flex flex-col items-center gap-6">
-          <div className="flex items-center gap-6">
+        <div className="flex flex-col items-center gap-4">
+          <div className="grid grid-cols-2 gap-4">
             {footerData.map((item) => (
               <FooterLink key={item.name} item={item} />
             ))}
