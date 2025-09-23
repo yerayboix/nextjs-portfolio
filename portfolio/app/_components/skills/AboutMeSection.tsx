@@ -1,4 +1,3 @@
-"use client"
 import { Particles } from "@/components/magicui/particles";
 
 // Data for technologies

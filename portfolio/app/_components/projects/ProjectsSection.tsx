@@ -1,4 +1,3 @@
-"use client"
 import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";

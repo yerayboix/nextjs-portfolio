@@ -1,4 +1,3 @@
-"use client"
 import { AvailabilityIndicator } from "@/components/ui/availability-indicator";
 import { HyperText } from "@/components/magicui/hyper-text";
 import Image from "next/image";

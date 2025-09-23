@@ -1,4 +1,3 @@
-"use client"
 import { Mail, Linkedin, Github, MessageCircle, Phone, FileText } from "lucide-react";
 import Link from "next/link";
 
