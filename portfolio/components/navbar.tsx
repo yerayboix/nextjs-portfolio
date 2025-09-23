@@ -15,101 +15,81 @@ import {
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const navItems = [
-        { name: "Home", href: "/" },
-        { name: "Habilidades", href: "/#about" },
-        { name: "Proyectos", href: "/#projects" },
-        { name: "Descargas", href: "/downloads" },
-        { name: "Contacto", href: "/contact" },
-    ];
-
-    const scrollToSection = (href: string) => {
-      if (href.startsWith('/#')) {
-        // Es un enlace interno con hash, hacer scroll
-        const element = document.querySelector(href.substring(1));
-        if (element) {
-          const navbarHeight = 64; // Altura de la navbar (h-16 = 64px)
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }
-      }
+  useEffect(() => {
+    // Set initial scroll state
+    setIsScrolled(window.scrollY > 50);
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
 
-    return (
-        <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-background/95 backdrop-blur-md border-b border-border/50"
-                    : "bg-transparent"
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
-                    {/* Logo/Brand - Left side */}
-                    <div className={`flex-shrink-0 transition-all duration-300 ${isScrolled
-                            ? "opacity-100 transform translate-x-0"
-                            : "opacity-0 transform -translate-x-4"
-                        }`}>
-                        <Link href="/" className="flex items-center space-x-3">
-                            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-custom-light/20">
-                                <Image
-                                    src="/images/yeray_navbar.jpg"
-                                    alt="Yeray Boix Torner"
-                                    width={40}
-                                    height={40}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <HyperText
-                                as="span"
-                                className="text-3xl font-new-title font-bold text-custom-light-2"
-                                fontClassName="font-new-title"
-                                animateOnHover={false}
-                            >
-                                YERAY BOIX TORNER
-                            </HyperText>
-                        </Link>
-                    </div>
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-                    {/* Desktop Navigation - Right side */}
-                    <div className="hidden md:flex items-center space-x-8">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                onClick={(e) => {
-                                    if (item.href.startsWith('/#')) {
-                                        e.preventDefault();
-                                        scrollToSection(item.href);
-                                    }
-                                }}
-                                className="text-custom-light hover:text-custom-light-2 transition-colors duration-200 font-pt-mono text-sm cursor-pointer"
-                            >
-                                <HyperText
-                                    fontClassName="font-pt-mono"
-                                    animateOnHover={false}
-                                >
-                                    {item.name}
-                                </HyperText>
-                            </Link>
-                        ))}
-                        <AvailabilityIndicator variant="badge" text="Disponible" />
-                    </div>
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Habilidades", href: "/#skills" },
+    { name: "Proyectos", href: "/#projects" },
+    { name: "Descargas", href: "/downloads" },
+    { name: "Contacto", href: "/contact" },
+  ];
 
-                              {/* Mobile menu button */}
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/95 backdrop-blur-md border-b border-border/50"
+        : "bg-transparent"
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo/Brand - Left side */}
+          <div className={`flex-shrink-0 transition-all duration-300 ${isScrolled
+            ? "opacity-100 transform translate-x-0"
+            : "opacity-0 transform -translate-x-4"
+            }`}>
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-custom-light/20">
+                <Image
+                  src="/images/yeray_navbar.jpg"
+                  alt="Yeray Boix Torner"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <HyperText
+                as="span"
+                className="text-3xl font-new-title font-bold text-custom-light-2"
+                fontClassName="font-new-title"
+                animateOnHover={false}
+              >
+                YERAY BOIX TORNER
+              </HyperText>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation - Right side */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-custom-light hover:text-custom-light-2 transition-colors duration-200 font-pt-mono text-sm cursor-pointer"
+              >
+                <HyperText
+                  fontClassName="font-pt-mono"
+                  animateOnHover={false}
+                >
+                  {item.name}
+                </HyperText>
+              </Link>
+            ))}
+            <AvailabilityIndicator variant="badge" text="Disponible" />
+          </div>
+
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -149,12 +129,6 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      onClick={(e) => {
-                          if (item.href.startsWith('/#')) {
-                              e.preventDefault();
-                              scrollToSection(item.href);
-                          }
-                      }}
                       className="block w-full text-left px-6 py-4 text-custom-light hover:text-custom-light-2 hover:bg-custom-light/10 transition-all duration-200 font-pt-mono text-base rounded-lg border border-transparent hover:border-custom-light/20"
                     >
                       {item.name}
@@ -167,12 +141,12 @@ const Navbar = () => {
               </SheetContent>
             </Sheet>
           </div>
-                </div>
+        </div>
 
-                
-            </div>
-        </nav>
-    );
+
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
