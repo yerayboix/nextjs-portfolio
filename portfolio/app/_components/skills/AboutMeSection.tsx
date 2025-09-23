@@ -151,11 +151,11 @@ const MobileLayout = () => {
     <>
       <div className="md:hidden flex justify-start pt-8 pb-8 px-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-9xl font-new-title font-bold text-secondary text-center">
+          <h1 className="text-6xl lg:text-9xl font-new-title font-bold text-secondary text-center">
             Habilidades
           </h1>
           <div className="text-center">
-            <p className="text-sm md:text-base font-bold lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
+            <p className="text-sm md:text-base lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
               Me mantengo constantemente actualizado con las últimas tecnologías y tendencias del sector, adaptándome a un entorno tecnológico en constante evolución. <span className="font-bold">No tengo miedo a enfrentarme al aprendizaje de cualquier tecnología que no aparezca en esta lista.</span>
             </p>
           </div>
