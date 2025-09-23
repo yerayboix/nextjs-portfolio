@@ -1,11 +1,9 @@
-"use client"
 import { Particles } from "@/components/magicui/particles";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Linkedin, Github, MessageCircle, Phone, Copy, Check } from "lucide-react";
+import { Mail, Linkedin, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
-import { useState } from "react";
 
 const contactData = [
   {
@@ -40,19 +38,6 @@ const contactData = [
 
 const ContactCard = ({ contact }: { contact: typeof contactData[0] }) => {
   const IconComponent = contact.icon;
-  const [copied, setCopied] = useState(false);
-  
-  const handleCopyEmail = async () => {
-    if (contact.name === "Email") {
-      try {
-        await navigator.clipboard.writeText(contact.value);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-      } catch (err) {
-        console.error('Failed to copy email:', err);
-      }
-    }
-  };
   
   return (
     <Card className="bg-custom-dark/50 backdrop-blur-sm border-custom-light/20 hover:border-custom-light/40 transition-all duration-300">
@@ -77,19 +62,6 @@ const ContactCard = ({ contact }: { contact: typeof contactData[0] }) => {
             </p>
           </div>
           
-          {contact.name === "Email" && (
-            <button
-              onClick={handleCopyEmail}
-              className="ml-3 p-2 cursor-pointer rounded-lg bg-custom-light/10 hover:bg-custom-light/20 transition-all duration-200 group"
-              title="Copiar email"
-            >
-              {copied ? (
-                <Check className="w-4 h-4 text-green-400" />
-              ) : (
-                <Copy className="w-4 h-4 text-custom-light group-hover:text-custom-light-2" />
-              )}
-            </button>
-          )}
         </div>
       </CardContent>
     </Card>

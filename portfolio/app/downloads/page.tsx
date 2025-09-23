@@ -1,5 +1,3 @@
-"use client"
-import { useEffect } from "react";
 import Link from "next/link";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { Particles } from "@/components/magicui/particles";
@@ -7,9 +5,6 @@ import Navbar from "@/components/navbar";
 import { FileText, Mail } from "lucide-react";
 
 export default function DownloadsPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const downloads = [
     {
@@ -27,16 +22,6 @@ export default function DownloadsPage() {
       color: "from-white to-gray-100"
     }
   ];
-
-  const handleDownload = (link: string, title: string) => {
-    if (link === "#") {
-      alert("Enlace no disponible aún. Por favor, contacta conmigo para obtener el documento.");
-      return;
-    }
-    
-    // Abrir en nueva pestaña
-    window.open(link, '_blank');
-  };
 
   return (
     <div className="min-h-screen bg-custom-dark relative">
@@ -85,8 +70,9 @@ export default function DownloadsPage() {
                   <p className="text-custom-light/70 font-pt-mono text-sm mb-6">
                     {item.description}
                   </p>
-                  <button
-                    onClick={() => handleDownload(item.link, item.title)}
+                  <Link
+                    href={item.link}
+                    target="_blank"
                     className={`inline-flex cursor-pointer items-center px-6 py-3 rounded-lg bg-gradient-to-r ${item.color} text-custom-dark font-pt-mono text-sm font-medium hover:opacity-90 transition-all duration-200 group-hover:shadow-lg`}
                   >
                     <svg 
@@ -103,7 +89,7 @@ export default function DownloadsPage() {
                       />
                     </svg>
                     Descargar
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
