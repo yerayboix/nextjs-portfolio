@@ -150,10 +150,10 @@ const MobileLayout = () => {
     <>
       <div className="md:hidden flex justify-start pt-8 pb-8 px-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto">
-          <h1 className="text-6xl lg:text-9xl font-new-title font-bold text-secondary text-center">
+          <h1 className="text-6xl lg:text-9xl font-new-title font-bold text-secondary ">
             Habilidades
           </h1>
-          <div className="text-center">
+          <div className="">
             <p className="text-sm md:text-base lg:text-xl font-pt-mono text-secondary/80 mt-4 max-w-6xl px-2 md:px-0">
               Me mantengo constantemente actualizado con las últimas tecnologías y tendencias del sector, adaptándome a un entorno tecnológico en constante evolución. <span className="font-bold">No tengo miedo a enfrentarme al aprendizaje de cualquier tecnología que no aparezca en esta lista.</span>
             </p>
@@ -161,7 +161,7 @@ const MobileLayout = () => {
         </div>
       </div>
       <div className="md:hidden flex-1 flex items-start justify-center px-6 pb-8 relative z-10">
-        <div className="text-center space-y-6 max-w-sm">
+        <div className="space-y-6 max-w-sm">
           {/* Technologies Sections */}
           <div className="space-y-6">
             {/* Languages */}
@@ -169,7 +169,7 @@ const MobileLayout = () => {
               <h2 className="text-2xl font-new-title font-semibold text-secondary">
                 Lenguajes
               </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-2">
                 {technologiesData.languages.map((lang) => (
                   <span
                     key={lang}
@@ -186,7 +186,7 @@ const MobileLayout = () => {
               <h2 className="text-2xl font-new-title font-semibold text-secondary">
                 Frameworks y Librerías
               </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-2">
                 {technologiesData.frameworks.map((framework) => (
                   <span
                     key={framework}
@@ -203,7 +203,7 @@ const MobileLayout = () => {
               <h2 className="text-2xl font-new-title font-semibold text-secondary">
                 DevOps
               </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-2">
                 {technologiesData.devops.map((tool) => (
                   <span
                     key={tool}
@@ -220,7 +220,7 @@ const MobileLayout = () => {
               <h2 className="text-2xl font-new-title font-semibold text-secondary">
                 Bases de Datos
               </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-2">
                 {technologiesData.databases.map((db) => (
                   <span
                     key={db}
@@ -237,7 +237,7 @@ const MobileLayout = () => {
               <h2 className="text-2xl font-new-title font-semibold text-secondary">
                 Comunicación
               </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-2">
                 {technologiesData.communication.map((comm) => (
                   <span
                     key={comm}
@@ -254,7 +254,7 @@ const MobileLayout = () => {
               <h2 className="text-2xl font-new-title font-semibold text-secondary">
                 Otros
               </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-2">
                 {technologiesData.others.map((other) => (
                   <span
                     key={other}

@@ -1,7 +1,7 @@
 import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Settings, Terminal, Code } from "lucide-react";
+import { Settings, Terminal, Code, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -158,7 +158,7 @@ const webProjectsData = [
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Celery", "Redis", "Supabase", "Docker", "Git"],
     image: "/images/apps/deoficina.jpg",
     liveUrl: "https://deoficina.es",
-    githubUrl: null,
+    githubUrl: "https://github.com/yerayboix/deoficina-web",
     isPublic: true,
     hasDetail: false
   },
@@ -169,10 +169,32 @@ const webProjectsData = [
     technologies: ["Next.js", "React", "TypeScript", "Django REST Framework", "Python", "Supabase", "Docker", "Git"],
     image: "/images/apps/gestioninventario.jpg",
     liveUrl: null,
-    githubUrl: null,
-    isPublic: false,
+    githubUrl: "https://github.com/yerayboix/gestion-inventario",
+    isPublic: true,
     hasDetail: false
-  }
+  },
+  {
+    id: 16,
+    title: "Tot Per Fira",
+    description: "Aplicación web para una compañía especializada en alquiler de altavoces, congeladores y venta de bebidas para eventos.",
+    technologies: ["Next.js", "React", "TypeScript", "Turso", "Docker", "Git"],
+    image: "/images/apps/totperfira.jpg",
+    liveUrl: "https://totperfira.es",
+    githubUrl: "https://github.com/yerayboix/tot-per-fira-app",
+    isPublic: true,
+    hasDetail: false
+  },
+  {
+    id: 17,
+    title: "Portfolio",
+    description: "El portfolio que estás viendo ahora mismo.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Docker", "Git"],
+    image: "/images/apps/portfolio.jpg",
+    liveUrl: null,
+    githubUrl: "https://github.com/yerayboix/nextjs-portfolio",
+    isPublic: true,
+    hasDetail: false
+  },
 ];
 
 // Data for tools
@@ -194,6 +216,16 @@ const toolsData = [
     technologies: ["Next.js", "React", "TypeScript", "Flask", "Python", "SQLite", "Docker", "Git"],
     githubUrl: null,
     isPublic: false,
+    hasDetail: false,
+    icon: Settings
+  },
+  {
+    id: 3,
+    title: "AMAZON SCRAPPER",
+    description: "Scrapper para la obtención de productos de Amazon y notificaciones mediante Telegram.",
+    technologies: ["Django REST Framework", "Python", "Celery", "Redis", "Supabase", "Docker", "Git"],
+    githubUrl: "https://github.com/yerayboix/amazon-scrapper",
+    isPublic: true,
     hasDetail: false,
     icon: Settings
   }
@@ -282,6 +314,20 @@ const WebProjectCard = ({ project }: { project: typeof webProjectsData[0] }) => 
               Ver Detalle
             </Link>
           )}
+          {project.githubUrl && (
+            <Link
+            href={project.githubUrl}
+            className="inline-block"
+            target="_blank"
+          >
+            <Button
+              variant="outline"
+              className="font-pt-mono cursor-pointer"
+            >
+              <Github className="w-4 h-4" /> GitHub
+            </Button>
+          </Link>
+          )}
         </CardFooter>
       </MagicCard>
     </Card>
@@ -337,6 +383,17 @@ const ToolCard = ({ tool }: { tool: typeof toolsData[0] }) => {
               className="px-4 py-2 border border-custom-light-2 text-custom-light-2 rounded-lg text-sm font-pt-mono hover:bg-custom-light-2/10 transition-colors duration-200"
             >
               Ver Detalle
+            </Link>
+          )}
+          {tool.githubUrl && (
+            <Link
+              href={tool.githubUrl}
+              className="inline-block"
+              target="_blank"
+            >
+              <Button variant="outline" className="font-pt-mono cursor-pointer">
+                <Github className="w-4 h-4" /> GitHub
+              </Button>
             </Link>
           )}
         </CardFooter>
@@ -413,12 +470,12 @@ const MobileLayout = () => {
     <>
       <div className="md:hidden flex justify-start pt-8 pb-8 px-8 relative z-10">
         <div className="w-full max-w-6xl mx-auto">
-          <h1 className="text-6xl lg:text-9xl font-new-title font-bold text-custom-light-2 text-center">
+          <h1 className="text-6xl lg:text-9xl font-new-title font-bold text-custom-light-2 ">
             Proyectos
           </h1>
-          <div className="text-center">
-            <p className="text-sm md:text-base lg:text-xl font-pt-mono text-custom-light-2/80 mt-4 max-w-6xl px-2 md:px-0">
-              Una selección de proyectos web y herramientas que demuestran mi experiencia en desarrollo fullstack y soluciones empresariales.
+          <div className="">
+            <p className="text-base lg:text-xl font-pt-mono text-custom-light-2/80 mt-4 max-w-6xl px-2 md:px-0">
+              Una selección de proyectos web y herramientas que demuestran mi experiencia.
             </p>
           </div>
         </div>
@@ -428,7 +485,7 @@ const MobileLayout = () => {
       <div className="md:hidden flex-1 px-6 pb-8 relative z-10">
         <div className="space-y-8">
           <div>
-            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-4 text-center">
+            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-4 ">
               Desarrollos Web
             </h2>
             <div className="space-y-6">
@@ -440,7 +497,7 @@ const MobileLayout = () => {
           
           {/* Tools Section */}
           <div>
-            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-4 text-center">
+            <h2 className="text-4xl font-new-title font-semibold text-custom-light-2 mb-4 ">
               Herramientas y APIs
             </h2>
             <div className="space-y-4">
