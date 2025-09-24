@@ -51,9 +51,9 @@ export default function DesktopLayout() {
               animateOnHover={false}
               textCase="normal"
             >
-              &quot;Me apasiona crear tecnología útil que resuelva problemas reales, acompañando a personas y empresas en la transformación de ideas en realidades.&quot;
+              &quot;Me esfuerzo para que cada día de mi vida como ingeniero sea un poco mejor que el día anterior. Trabajo y constancia.&quot;
             </HyperText>
-            <AvailabilityIndicator variant="badge" text="Disponible para trabajar de forma inmediata" />
+            <AvailabilityIndicator variant="badge" text="Disponible - Dame una oportunidad y no te arrepentirás" />
           </div>
         </div>
       </div>
